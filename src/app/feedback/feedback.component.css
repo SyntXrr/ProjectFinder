@@ -1,0 +1,127 @@
+.feedback
+{
+  height: 600px;
+  width: 100%;
+}
+
+.div_name_fb
+{
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  font-size: 50px;
+  font-family: MILanPro_SEMIBOLD,Microsoft YaHei;
+}
+
+.review_box
+{
+  float: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 300px;
+  width: 800px;
+  margin-top: 70px;
+  margin-left: 30px;
+}
+
+.r1
+{
+  float: left;
+  margin: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  height: 100px;
+  width: 210px;
+  margin-bottom: 5px;
+
+}
+
+.comment_box
+{
+  float:right;
+  margin-top: 70px;
+  margin-right: 30px;
+  height: 280px;
+  width: 400px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: black;
+  border: 2px solid;
+  border-color: red
+}
+
+.comment_box_btn:hover
+{
+  opacity: 0.7;
+}
+
+.name
+{
+  margin: 10px;
+}
+
+.name input[type=text]
+
+{
+  margin-top: 10px;
+  width: 380px;
+}
+
+.g_name
+{
+  font-weight: bold;
+  margin: 10px;
+  height: 20px;
+  width: 150px;
+}
+
+.r_text
+{
+  margin: 10px;
+  height: 60px;
+  width: 200px;
+
+}
+
+textarea
+{
+  margin: 10px;
+}
+
+textarea:focus
+{
+  outline: none;
+  border: none;
+}
+
+button
+{
+  background-color: #002a5c;
+  color: white;
+  margin-left:10PX;
+  border: none;
+  cursor: pointer;
+  width: 380px;
+  height: 30px;
+	background-color: red;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover
+{
+  opacity: 1px;
+}
+
+button:focus
+{
+  outline: none;
+  border: none;
+}
+.social_m_icon
+{
+  align-items: center;
+}
+.TR{
+  float: left;
+}

@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProjectFinder';
+  
+  bannerFlag : boolean =true;
+  formFlag : boolean =false;
+
+  showbanner(){
+    this.bannerFlag=false;
+    this.formFlag=true;
+  }
+  
+  showForm(){
+    this.bannerFlag=false;
+    this.formFlag=true;
+  }
 }

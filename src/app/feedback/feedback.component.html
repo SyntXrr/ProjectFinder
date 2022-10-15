@@ -1,0 +1,22 @@
+<div class ="feedback">
+    <br><br>
+    <div class="div_name_fb">Feedback</div>
+    <div class ="review_box">
+    <marquee direction="left">
+  
+    
+    <div class ="r1"  id="TR"  *ngFor ="let card of feedbacks">
+    <div class="g_name">{{card.name}}</div><div class="r_text">{{card.feedback}}</div></div>
+    </marquee>
+    </div>
+    
+    
+    <div class="comment_box">
+    
+    <div class="name"><input type="text" #name placeholder="  Name" required></div>
+    <textarea rows="10" cols="49    " name="comment" form="usrform" #exp placeholder=" Share your experience"></textarea>
+    <button (click)="sub(name.value,exp.value)">Post</button>
+    
+    </div>
+    
+    </div>

@@ -1,0 +1,312 @@
+.srch_bar{
+    height: 600px;
+    width: 100%;
+}
+
+#ttl{
+    font-size: 50px;
+    text-align: center;
+}
+
+
+.cat_cart
+{
+  cursor:pointer;
+  position: relative;
+  margin-top: 5px;
+  height: 100px;
+  width: 200px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.cat_cart img
+{
+  border-radius: 10px;
+}
+
+
+#nameplate, #nameplate1, #nameplate2, #nameplate3, #nameplate4, #nameplate5, #nameplate6, #nameplate7, #nameplate8, #nameplate9, #nameplate10, #nameplatea
+{
+  margin-top: 40px;
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.d1
+{
+  margin-top: 50px;
+  height: 110px;
+  width: 100%;
+}
+
+.d2
+{
+  height: 225px;
+  width: 40%;
+  float:left;
+}
+
+.d3
+{
+  margin-top: 30px;
+  cursor: pointer;
+  height: 150px;
+  width: 20%;
+  float: left;
+}
+
+.d3 img
+{
+  border-radius: 10px;
+}
+
+.d4
+{
+  height: 225px;
+  width: 40%;
+  float: right;
+}
+
+.d5
+{
+  height: 110px;
+  width: 100%;
+  float: right;
+}
+
+#cs
+{
+  float:left;animation-name: move1;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes move1
+{
+  0%{margin-left:0px}
+  100%{margin-left: 250px}
+}
+
+#as
+{
+  float: left;
+  animation-name: move2;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes move2
+{
+  0%{margin-left:0px}
+  100%{margin-left:15px}
+}
+
+
+#mb
+{
+  float: left;
+  animation-name: move3;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes move3
+{
+  0%{margin-left:0px}
+  100%{margin-left: 300px}
+}
+
+
+#fs
+{
+  float: left;
+  animation-name: move4;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes move4
+{
+  0%{margin-left:0px}
+  100%{margin-left: 300px}
+}
+
+#fd
+{
+  float: left;
+  animation-name: move5;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes move5
+{
+  0%{margin-left:0px}
+  100%{margin-left:250px}
+}
+
+#ele
+{
+float: right;
+animation-name: move6;
+animation-duration: 2s;
+animation-delay:1s;
+animation-fill-mode: forwards;
+}
+@keyframes move6
+{
+0%{margin-left:0px}
+100%{margin-right:300px}
+}
+
+#ch
+{
+  float: right;
+  animation-name: move7;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+ }
+ @keyframes move7
+ {
+  0%{margin-left:0px}
+  100%{margin-right: 300px}
+ }
+
+#bo
+{
+  float: right;
+  animation-name: move8;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+ }
+ @keyframes move8
+ {
+  0%{margin-left:0px}
+  100%{margin-right: 10px}
+ }
+
+#zo
+{
+   float: right;
+   animation-name: move9;
+   animation-duration: 2s;
+   animation-delay:1s;
+   animation-fill-mode: forwards;
+   }
+   @keyframes move9
+   {
+   0%{margin-left:0px}
+   100%{margin-right: 250px}
+   }
+
+#bt
+{
+  float: left;
+  animation-name: move10;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes move10
+{
+  0%{margin-left:0px}
+  100%{margin-left: 10px}
+}
+
+#st
+{
+  float: right;
+  float: right;
+  animation-name: move11;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+  }
+  @keyframes move11
+  {
+  0%{margin-left:0px}
+  100%{margin-right: 10px}
+  }
+
+#nt
+{
+   float: right;
+   animation-name: move12;
+   animation-duration: 2s;
+   animation-delay:1s;
+   animation-fill-mode: forwards;
+}
+   
+@keyframes move12
+{
+   0%{margin-left:0px}
+   100%{margin-right: 250px}
+}
+
+.Text{
+  font-size: 18px;
+  color: wheat;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+
+.srchCS{
+  padding: 10px;
+  height: 300px;
+}
+.srchCS h3{
+  margin: 0px;
+  float: left;
+}
+
+#searchCS{
+  border-color: red;
+  border-radius: 5px;
+  outline: none;
+  float: right;
+  height: 20px;
+  width: 200px;
+}
+
+.prjt_list{
+  margin-top: 10px;
+  float: left;
+  width:100% ;
+}
+
+.pr{
+  margin-left: 5px;
+  float: left;
+  border: 2px solid;
+  border-color: red;
+  height: 100px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.pr:hover{
+  box-shadow: 5px 10px #888888;
+  cursor: pointer;
+}
+
+.pr h4{
+  margin: 4px;
+}
+
+.pr img {
+  border-radius: 4px;
+  margin: 5px;
+  height: 90px;
+  width: 90px;
+  float: left;
+}
