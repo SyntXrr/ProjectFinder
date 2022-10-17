@@ -1,44 +1,30 @@
 <body>
 <div class="container" *ngIf="flagContainer">
 
+  <div class="sgn_up">
 
-<div class="sgn_up">
+    <div class="model">
 
-<div class="model">
+    <div class="sgn_up_name">New here ?</div>
+    <div class="tag_ln">Sign Up</div>
 
-<div class="sgn_up_name">New here ?</div>
-<div class="tag_ln">Sign Up</div>
+    <div class="name" id="content">
+      <div class="fname">First Name<input type="text" placeholder="Enter First Name"></div>
+      <div class="lname">Last Name<input type="text" placeholder="Enter Last Name" ></div>
+  </div>
 
-<div class="name" id="content">
-<div class="fname">
-First Name<input type="text" placeholder="Enter First Name" >
-</div>
-<div class="lname">
-Last Name<input type="text" placeholder="Enter Last Name">
-</div>
-</div>
+  <div class="email" id="content">Email<input type="email" placeholder="Enter Email" ></div>
 
-<div class="email" id="content">
-Email<input type="email" placeholder="Enter Email">
-</div>
-
-<div class="uname" id="content">
-User Name<input type="text" placeholder="Enter User Name">
-</div>
+  <div class="uname" id="content">User Name<input type="text" placeholder="Enter User Name" ></div>
 
 <div class="psw" id="content">
-<div class="pass">Enter Password<input type="password" placeholder="Create New Password"></div>
-<div class="c_pass">Confirm Password<input type="password" placeholder="Confirm Password"></div>
+  <div class="pass">Enter Password<input type="password" placeholder="Create New Password" ></div>
+  <div class="c_pass">Confirm Password<input type="password" placeholder="Confirm Password"></div>
 </div>
 
-<div class="prfnl" id="content">
-Student<input type="checkbox">
-Teacher<input type="checkbox">
-</div>
+<div class="prfnl" id="content">User Type<input type="text" placeholder="Enter User Type" ></div>
 
-<div class="sgn_up_btn" id="content">
-  <button (click)="showWel()" >Sign Up</button>
-</div>
+<div class="sgn_up_btn" id="content"><button>Sign Up</button></div>
 
 </div>
 
@@ -64,15 +50,11 @@ Password<input type="password" placeholder="Password">
 <div class="fr_pass">Forgot Password ?</div>
 
 <div class="sgn_in_btn" id="content">
-<button (click)="showWel()">Sign in</button>
+<button >Sign in</button>
 </div>
 
 </div>
-
 </div>
-
-<div class="footer">ALL RIGHTS RESERVED<br>@projectfinderteam</div>
-
 </div>
 </body>
 

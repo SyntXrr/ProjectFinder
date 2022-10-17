@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   
   }
-welcomeFlag: boolean =false;
-flagContainer:boolean =true;
+    welcomeFlag: boolean =false;
+    flagContainer:boolean =true;
+
 showWel(){
 this.flagContainer=false;
 this.welcomeFlag=true;
