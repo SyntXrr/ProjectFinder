@@ -47,7 +47,7 @@ signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String
     ConfirmPassword:this.CnfPasswaord,
     UserType:this.Usertype
   });
-  alert("User Created");
+  alert("Account Created Successfully. Plase Login");
 }
 
 }
