@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Database,set,ref,update } from '@angular/fire/database';
 
 @Component({
   selector: 'app-form',
@@ -14,7 +15,8 @@ export class FormComponent implements OnInit {
   Password:String="";
   CnfPasswaord:String="";
   Usertype:String="";
-  constructor() {
+
+  constructor(public database:Database) {
   }
 
   ngOnInit(): void {
@@ -36,6 +38,16 @@ signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String
   this.Password=pass;
   this.CnfPasswaord=cnfpss;
   this.Usertype=usrtp;
+  set(ref(this.database, 'users/' + this.Uname), {
+    FirstName:this.Fname,
+    LastName:this.Lname,
+    UserName:this.Uname,
+    Email:this.Email,
+    Password:this.Password,
+    ConfirmPassword:this.CnfPasswaord,
+    UserType:this.Usertype
+  });
+  alert("User Created");
 }
 
 }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "projectfinder-9334e": {
+      "hosting": {
+        "ProjectFinder": [
+          "projectfinder-9334e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "projectfinder-9334e"
+  }
+}
