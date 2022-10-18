@@ -23,12 +23,7 @@ export class FormComponent extends AppComponent implements OnInit {
   ngOnInit(): void {
   
   }
-    FormFlag: boolean=true;
-  showWel(){
-    this.FormFlag=false;
-    this.bannerFlag=false;
-    this.welcomeFlag=true;
-  }
+
 
 signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String,usrtp:String){
   this.Fname=fnm;

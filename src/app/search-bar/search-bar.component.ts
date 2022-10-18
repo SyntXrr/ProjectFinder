@@ -12,7 +12,7 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  header="Find Projects";
+  header="Explore !";
   showCS:boolean=false;
   showAN:boolean=false;
   showZO:boolean=false;

@@ -8,13 +8,13 @@ import { TrendingProjectsComponent } from './trending-projects/trending-projects
 import { ProjectDescriptionComponent } from './project-description/project-description.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
 import { FormComponent } from './form/form.component';
 import { WelcomeWindowComponent } from './welcome-window/welcome-window.component';
 import { FormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +24,9 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
     ProjectDescriptionComponent,
     FeedbackComponent,
     FooterComponent,
-    BannerComponent,
     FormComponent,
-    WelcomeWindowComponent
+    WelcomeWindowComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
