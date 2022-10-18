@@ -22,13 +22,14 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   
   }
-    welcomeFlag: boolean =false;
+
+    welcomeFlag: boolean = false;
     flagContainer:boolean =true;
 
-showWel(){
-this.flagContainer=false;
-this.welcomeFlag=true;
-}
+  showWel(){
+    this.flagContainer=false;
+    this.welcomeFlag=true;
+  }
 
 signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String,usrtp:String){
   this.Fname=fnm;
