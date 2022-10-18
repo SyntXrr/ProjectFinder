@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { FormComponent } from './form/form.component';
 import { WelcomeWindowComponent } from './welcome-window/welcome-window.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { WelcomeWindowComponent } from './welcome-window/welcome-window.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,61 +1,42 @@
 <body>
-<div class="container" *ngIf="flagContainer">
+  <div class="container" *ngIf="flagContainer">
+    <div class="sgn_up">
+      <div class="model">
 
-  <div class="sgn_up">
+        <div class="sgn_up_name">New here ?</div>
+        <div class="tag_ln">Sign Up</div>
 
-    <div class="model">
+        <div class="name" id="content">
+          <div class="fname">First Name<input type="text" placeholder="Enter First Name" #fname ></div>
+          <div class="lname">Last Name<input type="text" placeholder="Enter Last Name" #lname></div>
+        </div>
 
-    <div class="sgn_up_name">New here ?</div>
-    <div class="tag_ln">Sign Up</div>
+        <div class="email" id="content">Email<input type="email" placeholder="Enter Email" #email></div>
 
-    <div class="name" id="content">
-      <div class="fname">First Name<input type="text" placeholder="Enter First Name"></div>
-      <div class="lname">Last Name<input type="text" placeholder="Enter Last Name" ></div>
+        <div class="uname" id="content">User Name<input type="text" placeholder="Enter User Name" #userName></div>
+
+        <div class="psw" id="content">
+            <div class="pass">Enter Password<input type="password" placeholder="Create New Password" #pass></div>
+            <div class="c_pass">Confirm Password<input type="password" placeholder="Confirm Password" #cnfpass></div>
+        </div>
+
+        <div class="prfnl" id="content"><div class="fname">User Type<input type="text" placeholder="Student or Teacher" #userType ></div></div>
+ 
+        <div class="sgn_up_btn" id="content"><button (click)="signup(fname.value,lname.value,email.value,userName.value,pass.value,cnfpass.value,userType.value)">Sign Up</button></div>
+      </div>
+    </div>
+
+    <div class="sgn_in"><hr>
+      <div class="sgnin_model">
+        <div class="sgnin_name">Hi, there !</div>
+        <div class="tag_ln">Sign In</div>
+          <div class="uname" id="content1">User Name<input type="text" placeholder="User Name"></div>
+          <div class="psw" id="content2">Password<input type="password" placeholder="Password"></div>
+            <div class="fr_pass">Forgot Password ?</div>
+        <div class="sgn_in_btn" id="content"><button (click)="showWel()">Sign in</button></div>
+      </div>
+    </div>
   </div>
-
-  <div class="email" id="content">Email<input type="email" placeholder="Enter Email" ></div>
-
-  <div class="uname" id="content">User Name<input type="text" placeholder="Enter User Name" ></div>
-
-<div class="psw" id="content">
-  <div class="pass">Enter Password<input type="password" placeholder="Create New Password" ></div>
-  <div class="c_pass">Confirm Password<input type="password" placeholder="Confirm Password"></div>
-</div>
-
-<div class="prfnl" id="content">User Type<input type="text" placeholder="Enter User Type" ></div>
-
-<div class="sgn_up_btn" id="content"><button>Sign Up</button></div>
-
-</div>
-
-</div>
-
-<div class="sgn_in">
-
-<hr>
-
-<div class="sgnin_model">
-
-<div class="sgnin_name">Hi, there !</div>
-
-<div class="tag_ln">Sign In</div>
-
-<div class="uname" id="content1">
-User Name<input type="text" placeholder="User Name">
-</div>
-
-<div class="psw" id="content2">
-Password<input type="password" placeholder="Password">
-</div>
-<div class="fr_pass">Forgot Password ?</div>
-
-<div class="sgn_in_btn" id="content">
-<button >Sign in</button>
-</div>
-
-</div>
-</div>
-</div>
 </body>
 
 <app-banner *ngIf="welcomeFlag"></app-banner>
