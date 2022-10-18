@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Database,set,ref,update } from '@angular/fire/database';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
-
+export class FormComponent extends AppComponent implements OnInit {
   Fname:String="";
   Lname:String="";
   Email:String="";
@@ -17,17 +17,16 @@ export class FormComponent implements OnInit {
   Usertype:String="";
 
   constructor(public database:Database) {
+    super();
   }
 
   ngOnInit(): void {
   
   }
-
-    welcomeFlag: boolean = false;
-    flagContainer:boolean =true;
-
+    FormFlag: boolean=true;
   showWel(){
-    this.flagContainer=false;
+    this.FormFlag=false;
+    this.bannerFlag=false;
     this.welcomeFlag=true;
   }
 
@@ -39,6 +38,7 @@ signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String
   this.Password=pass;
   this.CnfPasswaord=cnfpss;
   this.Usertype=usrtp;
+
   set(ref(this.database, 'users/' + this.Uname), {
     FirstName:this.Fname,
     LastName:this.Lname,
