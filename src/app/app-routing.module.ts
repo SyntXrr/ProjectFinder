@@ -5,6 +5,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { BannerComponent } from './banner/banner.component';
 import { AccountComponent } from './account/account.component';
+import { TrendingProjectsComponent } from './trending-projects/trending-projects.component';
 
 const routes: Routes = [
   {path : '',component: BannerComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path : 'feedback',component: FeedbackComponent},
   {path : 'signin',component: FormComponent},
   {path : 'dashboard',component: AccountComponent},
+  {path : 'trending',component: TrendingProjectsComponent},
 ];
 
 @NgModule({

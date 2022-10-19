@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
@@ -10,7 +9,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { WelcomeWindowComponent } from './welcome-window/welcome-window.component';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
@@ -18,8 +17,8 @@ import { BannerComponent } from './banner/banner.component';
 import { AccountComponent } from './account/account.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { MatSidenavModule}  from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
+import { MatSidenavModule }  from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -43,7 +42,7 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatCardModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

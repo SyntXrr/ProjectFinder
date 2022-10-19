@@ -4,14 +4,12 @@
     width: 100%;
   }
 #ttl1{
+    padding-top: 30px;
     font-size: 50px;
     text-align: center;
     color: white;
 }
 
-
-
-  
   .line_1
   {
     height:270px;
