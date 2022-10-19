@@ -11,7 +11,7 @@ const routes: Routes = [
   {path : 'find',component: SearchBarComponent},
   {path : 'feedback',component: FeedbackComponent},
   {path : 'signin',component: FormComponent},
-  {path : 'account',component: AccountComponent},
+  {path : 'dashboard',component: AccountComponent},
 ];
 
 @NgModule({

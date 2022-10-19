@@ -16,6 +16,10 @@ import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { BannerComponent } from './banner/banner.component';
 import { AccountComponent } from './account/account.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule}  from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -35,8 +39,12 @@ import { AccountComponent } from './account/account.component';
     AppRoutingModule,
     FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideDatabase(() => getDatabase())
-  ],
+    provideDatabase(() => getDatabase()),
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatSidenavModule,
+    MatButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

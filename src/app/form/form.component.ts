@@ -24,7 +24,6 @@ export class FormComponent implements OnInit {
   
   }
 
-
 signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String,usrtp:String){
   this.Fname=fnm;
   this.Lname=lnm;
@@ -58,8 +57,9 @@ showAccount(usrId:String,pass:String){
         alert("Login");
       }
       else{
-        alert("Logedout");
+        alert("Invalid Credentials");
       }
   });
 }
+
 }
