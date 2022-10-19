@@ -1,22 +1,21 @@
+.nav_bar
+{
+  height: 55px;
+  width: 100%;
+  background-color:  #ef0606;
+}
 .logo_area
 {
   float: left;
   margin: 10px;
   height: 30px;
   width: 300px;
-  background-color: white;
-}
-
-.nav_bar
-{
-  height: 50px;
-  width: 100%;
   background-color:  #ef0606;
 }
 
 .reg_area{
-    color: aliceblue;
-    margin: 1%;
+    text-emphasis-color: red;
+    margin: 10px;
     float:right;
     cursor: pointer;
 }
