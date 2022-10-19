@@ -15,6 +15,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { BannerComponent } from './banner/banner.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BannerComponent } from './banner/banner.component';
     FooterComponent,
     FormComponent,
     WelcomeWindowComponent,
-    BannerComponent
+    BannerComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

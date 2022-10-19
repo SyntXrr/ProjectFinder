@@ -30,10 +30,10 @@
       <div class="sgnin_model">
         <div class="sgnin_name">Hi, there !</div>
         <div class="tag_ln">Sign In</div>
-          <div class="uname" id="content1">User Name<input type="text" placeholder="User Name"></div>
-          <div class="psw" id="content2">Password<input type="password" placeholder="Password"></div>
+          <div class="uname" id="content1">User Name<input type="text" placeholder="User Name" #uname=""></div>
+          <div class="psw" id="content2">Password<input type="password" placeholder="Password" #upass></div>
             <div class="fr_pass">Forgot Password ?</div>
-        <div class="sgn_in_btn" id="content"><button >Sign in</button></div>
+        <div class="sgn_in_btn" id="content"><button (click)="showAccount(uname.value,upass.value)">Sign in</button></div>
       </div>
     </div>
   </div>

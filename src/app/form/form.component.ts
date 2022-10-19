@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Database,set,ref,update } from '@angular/fire/database';
-import { AppComponent } from '../app.component';
+import { Database,set,ref,update,onValue } from '@angular/fire/database';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent extends AppComponent implements OnInit {
+export class FormComponent implements OnInit {
   Fname:String="";
   Lname:String="";
   Email:String="";
@@ -15,9 +14,10 @@ export class FormComponent extends AppComponent implements OnInit {
   Password:String="";
   CnfPasswaord:String="";
   Usertype:String="";
+  router: any;
 
   constructor(public database:Database) {
-    super();
+
   }
 
   ngOnInit(): void {
@@ -46,4 +46,20 @@ signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String
   alert("Account Created Successfully. Plase Login");
 }
 
+userId:String="";
+password:String="";
+showAccount(usrId:String,pass:String){
+  this.userId=usrId;
+  this.password=pass;
+  const starCountRef = ref(this.database, 'users/' + this.userId);
+  onValue(starCountRef, (snapshot) => {
+    const data = snapshot.val();
+      if(this.password===data.Password){
+        alert("Login");
+      }
+      else{
+        alert("Logedout");
+      }
+  });
+}
 }
