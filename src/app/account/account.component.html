@@ -15,11 +15,22 @@
         <mat-card id="prfl_card">
                   <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>Student</h4></div></div>
                   <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>Paresh Pandit</h4></div></div>
-                  <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>PareshPandit5803@gmail.com</h4></div></div>
+                  <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>PareshPandit58@gmail.com</h4></div></div>
                   <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>MIT WPU</h4></div></div>
                   <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>FY MSC</h4></div></div>
          </mat-card>
     </div>
-    <div class="peojects" *ngIf="projectWind">ProjectWindow</div>
+    <div class="peojects" *ngIf="projectWind">
+      <mat-card id="prjt_list">
+            <mat-card-header>My Project List</mat-card-header>
+      </mat-card>
+      <mat-card id="upload">
+         <mat-card-header>Upload Your Project here</mat-card-header>
+         <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
+         <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
+         <div class="prjt_cat">Project Category<input type="text" placeholder="Project Category" #pcat></div>
+         <button mat-button (click)="upload(pname.value,pdescr.value,pcat.value)">Uplaod</button>
+      </mat-card>
+    </div>
 
  </mat-sidenav-container>

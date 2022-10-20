@@ -25,7 +25,7 @@
 
 #prfl_card{
   margin: 10px;
-  height: 250px;
+  height: 150px;
 }
 
 
@@ -54,4 +54,22 @@
   border: 1px solid rgb(192, 137, 137);
   text-align: center;
   border-radius: 0px 0px 8px 8px;
+}
+
+#prjt_list{
+  margin: 10px;;
+  width:45%;
+  float:left;
+}
+
+#upload{
+  margin: 10px;
+  width:45%;
+  float:left;
+}
+input[type="text"], input[type="email"], input[type="password"]
+{
+  outline: none;
+  height: 25px;
+  width: 95%;
 }

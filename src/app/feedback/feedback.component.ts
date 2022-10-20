@@ -30,8 +30,6 @@ export class FeedbackComponent implements OnInit {
       Feedback:tem_struct.feedback
     });
     alert("Feedback registered successfully!!!");
-    
-
   }
   ngOnInit(): void {
   }
