@@ -8,7 +8,6 @@ import { ProjectDescriptionComponent } from './project-description/project-descr
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
-import { WelcomeWindowComponent } from './welcome-window/welcome-window.component';
 import { FormGroup, FormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -29,7 +28,6 @@ import { MatButtonModule } from '@angular/material/button';
     FeedbackComponent,
     FooterComponent,
     FormComponent,
-    WelcomeWindowComponent,
     BannerComponent,
     AccountComponent
   ],

@@ -1,11 +1,24 @@
 <mat-sidenav-container class = "tp-container">
     <mat-sidenav mode = "side" opened>
+        <section class="Profile_pic"><img src="assets/icon.png" id="shrt_img"></section>
        <section class = "tp-section">
-          <span>File</span>
+          <span id="profile" (click)="showPrfl()">Profile</span>
        </section>
        <section class = "tp-section">
-          <span>Edit</span>
+          <span id="Projects" (click)="showPrjt()">Projects</span>
        </section>
+       <section class = "tp-section">
+        <span id="logout">Logout</span>
+     </section>
     </mat-sidenav>
-    <mat-sidenav-content>Main content</mat-sidenav-content>
+    <div class="profile" *ngIf="profileWind">
+        <mat-card id="prfl_card">
+                <div class="personal_info">
+                  <div class="prfl_img"><img src ="assets/icon.png" id="prfl_ic"></div>
+            
+                </div>
+        </mat-card>
+    </div>
+    <div class="peojects" *ngIf="projectWind">ProjectWindow</div>
+
  </mat-sidenav-container>
