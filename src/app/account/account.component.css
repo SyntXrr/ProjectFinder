@@ -28,9 +28,30 @@
   height: 250px;
 }
 
-.personal_info{
-margin-left: auto;
-margin-right: auto;
-width: 50%;
-height: 100%;
+
+.box{
+  border-radius: 8px;
+  float: left;
+  margin-left: 10px;
+  border: 2px solid;
+  border-color: white;
+  width: 200px;
+}
+
+.txt{  
+  padding: 4px;
+  color: white;
+  border-radius: 8px 8px 0px 0px;
+  text-align: center;
+  height: 20px;
+  width: 100%;
+  background-color: rgb(236, 79, 79);
+}
+
+#data{
+  width: 100%;
+  padding: 3px;
+  border: 1px solid rgb(192, 137, 137);
+  text-align: center;
+  border-radius: 0px 0px 8px 8px;
 }

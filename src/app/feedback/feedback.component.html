@@ -4,13 +4,11 @@
     <div class ="review_box">
     <marquee direction="left">
   
-    
     <div class ="r1"  id="TR"  *ngFor ="let card of feedbacks">
     <div class="g_name">{{card.name}}</div><div class="r_text">{{card.feedback}}</div></div>
     </marquee>
-    </div>
     
-    
+</div>
     <div class="comment_box">
     
     <div class="name"><input type="text" #name placeholder="  Name" required></div>
@@ -18,5 +16,4 @@
     <button (click)="sub(name.value,exp.value)">Post</button>
     
     </div>
-    
     </div>
