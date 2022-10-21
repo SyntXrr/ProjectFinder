@@ -68,7 +68,7 @@
   width:45%;
   float:left;
 }
-.prjt_name,.prjt_descr, .prjt_cat{
+.prjt_name,.prjt_descr, .prjt_cat,.prjt_att,.prjt_sum{
   color: rgb(192, 137, 137);
   margin-top: 10px;
 }
@@ -114,5 +114,30 @@ input[type="text"]
 }
 
 .cv_img:hover{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(192, 137, 137), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.prjt_att img{
+  margin-left: 10px;
+  height: 20px;
+ 
+  cursor: pointer;
+}
+#prjt_crd{
+  margin: 5px;
+  height: 150px;
+  width: 95%;
+  box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#prjt_cv_img{
+  height: 100%;
+  width: 150px;
+  float: left;
+  border-radius: 8px 0px 0px 8px;
+}
+.prjt_data{
+  color: rgba(192, 137, 137);
+  float: left;
+  margin-left: 10px;
 }

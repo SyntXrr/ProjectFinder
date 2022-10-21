@@ -5,7 +5,7 @@
           <span id="profile" >Profile</span>
        </section>
        <section class = "tp-section"(click)="showPrjt()">
-          <span id="Projects" >Projects</span>
+          <span id="Projects" >My Projects</span>
        </section>
        <section class = "tp-section">
         <span id="logout">Logout</span>
@@ -23,6 +23,17 @@
     <div class="peojects" *ngIf="projectWind">
       <mat-card id="prjt_list" >
             <mat-card-header id="header">My Project List</mat-card-header>
+            <mat-card id="prjt_crd">
+               <img id="prjt_cv_img"src="assets/logo.png">
+               <div class="prjt_data">
+                  <h4>{{ProjectName}}</h4>
+                  <h5>{{ProjectCat}}</h5>
+                  <h5>{{ProjectSumm}}</h5>
+                  <h5>{{ProjectAuth}}</h5>
+               </div>
+            </mat-card>
+
+
       </mat-card>
       <mat-card id="upload">
          <mat-card-header id="header">Upload Your Project here</mat-card-header>
@@ -33,8 +44,10 @@
             </div>
          </div>
          <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
+         <div class="prjt_sum">Project Summery<input type="text" placeholder="Project Summery" #psumm></div>
          <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
          <div class="prjt_cat">Project Category<input type="text" placeholder="Select Category" #pcat></div>
+         <div class="prjt_att">Attach Files<img src="assets/att.png"></div>
          <button id="btn_upload" mat-button (click)="upload(pname.value,pdescr.value,pcat.value)">Uplaod</button>
       </mat-card>
     </div>

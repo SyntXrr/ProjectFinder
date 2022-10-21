@@ -12,6 +12,11 @@ export class AccountComponent implements OnInit {
   constructor(public database:Database) {}   
    ngOnInit(): void {}
 
+  ProjectName:String="ProjectFinder";
+  ProjectCat:String="Computer Science";
+  ProjectSumm:String="Project Showcase for college Student";
+  ProjectAuth:String="Kunal kohinkar";
+
   profileWind:boolean=true;
   projectWind:boolean=false;
 
