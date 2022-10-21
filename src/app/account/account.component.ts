@@ -72,7 +72,6 @@ export class AccountComponent implements OnInit {
   }
   
   
-
   
   ProjectName:String="ProjectFinder";
   ProjectCat:String="Computer Science";

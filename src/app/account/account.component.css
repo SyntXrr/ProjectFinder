@@ -107,7 +107,7 @@ body
   font-size: 20px;
 }
 
-input[type="text"], input[type="email"], input[type="password"]
+.frm input[type="text"], input[type="email"], input[type="password"]
 {
   outline: none;
   height: 25px;
@@ -172,6 +172,7 @@ hr
   width: 100%;
   height: 100%;
 }
+
 #shrt_img{
     margin-left: 30%;
     height: 100px;
