@@ -1,3 +1,96 @@
+ <!--
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
+<body>
+
+<div class="container mt-3">
+    <table class = "table">
+        <thead>
+            <th>Name</th>
+            <th>FeedBack</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</div>
+
+
+    Firebase Libraries--><!--
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js"></script> 
+    
+    <script type="module">
+        
+    // Your web app's Firebase configuration
+
+    import { initializeApp } from "firebase/app";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDfzwsuGY7VNxMrfKby0XvGHljXgqsOC0E",
+      authDomain: "projectfinder-9334e.firebaseapp.com",
+      databaseURL: "https://projectfinder-9334e-default-rtdb.firebaseio.com",
+      projectId: "projectfinder-9334e",
+      storageBucket: "projectfinder-9334e.appspot.com",
+      messagingSenderId: "673201049121",
+      appId: "1:673201049121:web:54ca77750a31a624049d60"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    
+    import { getDatabase, ref, child, onValue, get} 
+    from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js';
+
+    const db = getDatabase();
+    
+    var stdNo = 0;
+    var tbody = document.getElementById('tbody1');
+    
+        function AddItemToTable(name,feedback){
+            let trow= document.createElement("trow");
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+    
+            td1.innerHTML= ++stdNo;
+            td2.innerHTML= name;
+            td3.innerHTML= feedback;
+    
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+    
+            tbody.appendChild(trow);
+        }
+    
+        function  AddAllToTable(TheStudent){
+            stdNo = 0;
+            tbody.innerHTML="";
+            TheStudent.forEach(element =>{
+                AddItemToTable(element.Name, element.Feedback);
+            });
+        }
+    
+
+        function GetAllDataOnce(){
+            const dbRef = ref(db);
+
+            get(child(dbRef, "feedbacks"))
+            .than((snapshot)=>{
+                var students =[];
+
+                snapshot.forEach(childsnapshot=>{
+                    students.push(childsnapshot.val());
+                });
+
+                AddAllToTable(students);
+            })
+        }
+
+        window.onload = GetAllDataOnce;
+
+    </script>
+    </body>-->
+
 <div class ="feedback">
     <br><br>
     <div class="div_name_fb">Feedback</div>
@@ -10,10 +103,8 @@
     
 </div>
     <div class="comment_box">
-    
+    <div class="name"><input type="number" #ID placeholder="ID" required></div>
     <div class="name"><input type="text" #name placeholder="  Name" required></div>
     <textarea rows="10" cols="49    " name="comment" form="usrform" #exp placeholder=" Share your experience"></textarea>
-    <button (click)="sub(name.value,exp.value)">Post</button>
-    
-    </div>
-    </div>
+    <button (click)="sub(ID.value,name.value,exp.value)">Post</button>
+</div>
