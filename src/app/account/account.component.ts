@@ -14,42 +14,18 @@ export class AccountComponent implements OnInit {
    dashboard:boolean=false;
    form:boolean=true;
    
-  Fname:String="";
-  Lname:String="";
-  Email:String="";
-  Uname:String="";
-  Password:String="";
-  CnfPasswaord:String="";
-  Usertype:String="";
-  college:string="";
-  class:String="";
-
   router: any;
   
-  userId:String="";
-  password:String="";
-
-  signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String,usrtp:String,clg:string,cls:String){
+  signup(fnm:String,lnm:String,eml:String,pass:String,cnfpss:String,usrtp:String,clg:string,cls:String){
    if(pass===cnfpss){
-    this.Fname=fnm;
-    this.Lname=lnm;
-    this.Email=eml;
-    this.Uname=usrName;
-    this.Password=pass;
-    this.CnfPasswaord=cnfpss;
-    this.Usertype=usrtp;
-    this.college=clg;
-    this.class=cls;
-
-    set(ref(this.database,'users/' + this.Uname +'/Profile'), {
-      FirstName:this.Fname,
-      LastName:this.Lname,
-      UserName:this.Uname,
-      Email:this.Email,
-      Password:this.Password,
-      UserType:this.Usertype,
-      College:this.college,
-      Class:this.class
+    set(ref(this.database,'users/' + eml +'/Profile'), {
+      FirstName:fnm,
+      LastName:lnm,
+      Email:eml,
+      Password:pass,
+      UserType:usrtp,
+      College:clg,
+      Class:cls
     });
     alert("Account Created Successfully. Plase Login");
   }
@@ -61,6 +37,9 @@ export class AccountComponent implements OnInit {
   PEmail:String="";
   College:String="";
   Class:String="";
+
+  userId:String="";
+  password:String="";
 
  login(usrId:String,pass:String){
     this.userId=usrId;
@@ -85,7 +64,6 @@ export class AccountComponent implements OnInit {
   }
   
   
-  
   ProjectName:String="ProjectFinder";
   ProjectCat:String="Computer Science";
   ProjectSumm:String="Project Showcase for college Student";
@@ -94,11 +72,6 @@ export class AccountComponent implements OnInit {
   profileWind:boolean=true;
   projectWind:boolean=false;
 
-  projectName:String="";
-  projectDescription:String="";
-  projectSummery:String="";
-  projectCategory:String="";
-    
   showPrfl(){
     this.projectWind=false;
     this.profileWind=true;
@@ -109,21 +82,19 @@ export class AccountComponent implements OnInit {
     this.projectWind=true;
   }
 
+  projectCategory:String="";
   upload(pname:String,psumm:string,pdesc:String){
-    this.projectName=pname;
-    this.projectDescription=pdesc;
-    this.projectSummery=psumm;
     set(ref(this.database, 'Projects/' + this.projectCategory), {
-      ProjectName:this.projectName,
-      ProjectDescription:this.projectDescription,
-      ProjectSummery: this.projectSummery,
+      ProjectName:pname,
+      ProjectDescription:pdesc,
+      ProjectSummery: psumm,
       ProjectCategory:this.projectCategory,
       Author:this.Name
     });
-    set(ref(this.database, 'users/' + this.userId  + '/Projects/' + this.projectName),{
-      ProjectName:this.projectName,
-      ProjectDescription:this.projectDescription,
-      ProjectSummery: this.projectSummery,
+    set(ref(this.database, 'users/' + this.userId  + '/Projects/' + pname),{
+      ProjectName:pname,
+      ProjectDescription:pdesc,
+      ProjectSummery: psumm,
       ProjectCategory:this.projectCategory,
       Author:this.Name
     });
