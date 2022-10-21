@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Database,set,ref,update,onValue } from '@angular/fire/database';
+import { Database,set,ref,onValue, child} from '@angular/fire/database';
 import { UserName } from '../UserName';
 
 @Component({
@@ -28,6 +28,7 @@ export class FormComponent extends UserName implements OnInit {
   
   }
 
+
 signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String,usrtp:String,clg:string,cls:String){
   this.Fname=fnm;
   this.Lname=lnm;
@@ -38,8 +39,7 @@ signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String
   this.Usertype=usrtp;
   this.college=clg;
   this.class=cls;
-
-  set(ref(this.database, 'users/' + this.Uname), {
+  set(ref(this.database,'users/' + this.Uname +'/Profile'), {
     FirstName:this.Fname,
     LastName:this.Lname,
     UserName:this.Uname,
