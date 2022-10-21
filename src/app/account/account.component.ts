@@ -44,8 +44,8 @@ export class AccountComponent implements OnInit {
  login(usrId:String,pass:String){
     this.userId=usrId;
     this.password=pass;
-    const starCountRef = ref(this.database, 'users/' + this.userId  + '/Profile');
-    onValue(starCountRef, (snapshot) => {
+    const DB = ref(this.database, 'users/' + this.userId  + '/Profile');
+    onValue(DB, (snapshot) => {
       const data = snapshot.val();
         if(this.password===data.Password){
           alert("Login Successfull");
