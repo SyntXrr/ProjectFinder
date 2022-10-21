@@ -84,7 +84,7 @@ export class AccountComponent implements OnInit {
 
   projectCategory:String="";
   upload(pname:String,psumm:string,pdesc:String){
-    set(ref(this.database, 'Projects/' + this.projectCategory), {
+    set(ref(this.database, 'Projects/' + this.projectCategory + '/'+ pname), {
       ProjectName:pname,
       ProjectDescription:pdesc,
       ProjectSummery: psumm,
