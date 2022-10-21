@@ -94,6 +94,7 @@ export class AccountComponent implements OnInit {
 
   projectName:String="";
   projectDescription:String="";
+  projectSummery:String="";
   projectCategory:String="";
     
   showPrfl(){
@@ -106,15 +107,23 @@ export class AccountComponent implements OnInit {
     this.projectWind=true;
   }
 
-  upload(pname:String,pdesc:String,pcat:string){
+  upload(pname:String,psumm:string,pdesc:String){
     this.projectName=pname;
     this.projectDescription=pdesc;
-    this.projectCategory=pcat;
-    set(ref(this.database, '/Projetcs'+'/Computer Science'), {
+    this.projectSummery=psumm;
+    set(ref(this.database, 'Projects/' + this.projectCategory), {
       ProjectName:this.projectName,
       ProjectDescription:this.projectDescription,
+      ProjectSummery: this.projectSummery,
       ProjectCategory:this.projectCategory,
-      Author:this.userId
+      Author:this.Name
+    });
+    set(ref(this.database, 'users/' + this.userId  + '/Projects'),{
+      ProjectName:this.projectName,
+      ProjectDescription:this.projectDescription,
+      ProjectSummery: this.projectSummery,
+      ProjectCategory:this.projectCategory,
+      Author:this.Name
     });
     alert("Project Uploaded Succesfully");
   }

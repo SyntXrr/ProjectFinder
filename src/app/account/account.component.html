@@ -94,9 +94,24 @@
              <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
              <div class="prjt_sum">Project Summery<input type="text" placeholder="Project Summery" #psumm></div>
              <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
-             <div class="prjt_cat">Project Category<input type="text" placeholder="Select Category" #pcat></div>
+             <div class="prjt_cat">Project Category
+                <select [(ngModel)]="projectCategory" class="prjt_cat" id="sltCat">
+                    <option>Computer Science</option>
+                    <option>Animation</option>
+                    <option>Chemistry</option>
+                    <option>Forensic Science</option>
+                    <option>Micro Biology</option>
+                    <option>Food Processing</option>
+                    <option>Boi Technology</option>
+                    <option>Statistics</option>
+                    <option>Electrical</option>
+                    <option>Nano Science</option>
+                    <option>Chemistry</option>
+                    <option>Zoology</option>
+                </select>
+             </div>
              <div class="prjt_att">Attach Files<img src="assets/att.png"></div>
-             <button id="btn_upload" mat-button (click)="upload(pname.value,pdescr.value,pcat.value)">Uplaod</button>
+             <button id="btn_upload" mat-button (click)="upload(pname.value,psumm.value,pdescr.value)">Uplaod</button>
           </mat-card>
         </div>
      </mat-sidenav-container>

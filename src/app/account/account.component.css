@@ -246,6 +246,7 @@ hr
     color: rgb(192, 137, 137);
     margin-top: 10px;
   }
+
   input[type="text"]
   {
     outline: none;
@@ -253,6 +254,7 @@ hr
     height: 25px;
     width: 99%;
   }
+
   #header{
     padding: 4px;
     background-color: rgb(236, 79, 79);
@@ -294,7 +296,6 @@ hr
   .prjt_att img{
     margin-left: 10px;
     height: 20px;
-   
     cursor: pointer;
   }
   #prjt_crd{
@@ -316,3 +317,9 @@ hr
     margin-left: 10px;
   }
   
+#sltCat{
+    outline: none;
+    border:1px solid rgb(192, 137, 137);
+    height: 25px;
+    width: 99%;
+}
