@@ -1,55 +1,104 @@
-<mat-sidenav-container class = "tp-container">
-    <mat-sidenav mode = "side" opened>
-        <section class="Profile_pic"><img src="assets/icon.png" id="shrt_img"></section>
-       <section class = "tp-section" (click)="showPrfl()">
-          <span id="profile" >Profile</span>
-       </section>
-       <section class = "tp-section"(click)="showPrjt()">
-          <span id="Projects" >My Projects</span>
-       </section>
-       <section class = "tp-section">
-        <span id="logout">Logout</span>
-     </section>
-    </mat-sidenav>
-    <div class="profile" *ngIf="profileWind">
-        <mat-card id="prfl_card">
-                  <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>Student</h4></div></div>
-                  <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>Paresh Pandit</h4></div></div>
-                  <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>PareshPandit58@gmail.com</h4></div></div>
-                  <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>MIT WPU</h4></div></div>
-                  <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>FY MSC</h4></div></div>
-         </mat-card>
-    </div>
-    <div class="peojects" *ngIf="projectWind">
-      <mat-card id="prjt_list" >
-            <mat-card-header id="header">My Project List</mat-card-header>
-            <mat-card id="prjt_crd">
-               <img id="prjt_cv_img"src="assets/logo.png">
-               <div class="prjt_data">
-                  <h4>{{ProjectName}}</h4>
-                  <h5>{{ProjectCat}}</h5>
-                  <h5>{{ProjectSumm}}</h5>
-                  <h5>{{ProjectAuth}}</h5>
-               </div>
-            </mat-card>
-
-
-      </mat-card>
-      <mat-card id="upload">
-         <mat-card-header id="header">Upload Your Project here</mat-card-header>
-         <div class="cv_img">
-            <div class="ic">
-               <img src="assets/up_ic.png">
-               <h3>Upload Cover Image</h3>
+<div class="frm" *ngIf="form">
+    <body>
+        <div class="container">
+          <div class="sgn_up">
+            <div class="model">
+              <div class="sgn_up_name">New here ?</div>
+              <div class="tag_ln">Sign Up</div>
+      
+              <div class="name" id="content">
+                <div class="fname">First Name<input type="text" placeholder="Enter First Name" #fname ></div>
+                <div class="lname">Last Name<input type="text" placeholder="Enter Last Name" #lname></div>
+              </div>
+      
+              <div class="email" id="content">Email<input type="email" placeholder="Enter Email" #email></div>
+      
+              <div class="uname" id="content">User Name<input type="text" placeholder="Enter User Name" #userName></div>
+      
+              <div class="clg" id="content">college<input type="text" placeholder="Collage Name" #clgName></div>
+              <div class="cls" id="content">Class<input type="text" placeholder="Class" #class></div>
+      
+              <div class="psw" id="content">
+                  <div class="pass">Enter Password<input type="password" placeholder="Create New Password" #pass></div>
+                  <div class="c_pass">Confirm Password<input type="password" placeholder="Confirm Password" #cnfpass></div>
+              </div>
+      
+              <div class="prfnl" id="content"><div class="fname">User Type<input type="text" placeholder="Student or Teacher" #userType ></div></div>
+       
+              <div class="sgn_up_btn" id="content"><button (click)="signup(fname.value,lname.value,email.value,userName.value,pass.value,cnfpass.value,userType.value,clgName.value,class.value)">Sign Up</button></div>
+          
             </div>
-         </div>
-         <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
-         <div class="prjt_sum">Project Summery<input type="text" placeholder="Project Summery" #psumm></div>
-         <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
-         <div class="prjt_cat">Project Category<input type="text" placeholder="Select Category" #pcat></div>
-         <div class="prjt_att">Attach Files<img src="assets/att.png"></div>
-         <button id="btn_upload" mat-button (click)="upload(pname.value,pdescr.value,pcat.value)">Uplaod</button>
-      </mat-card>
-    </div>
+          </div>
+      
+          <div class="sgn_in"><hr>
+            <div class="sgnin_model">
+              <div class="sgnin_name">Hi, there !</div>
+              <div class="tag_ln">Sign In</div>
+                <div class="uname" id="content1">User Name<input type="text" placeholder="User Name" #uname=""></div>
+                <div class="psw" id="content2">Password<input type="password" placeholder="Password" #upass></div>
+                  <div class="fr_pass">Forgot Password ?</div>
+              <div class="sgn_in_btn" id="content"><button (click)="login(uname.value,upass.value)">Sign in</button></div>
+            </div>
+          </div>
+        </div>
+      </body>
+      <app-account *ngIf="dashboard"></app-account>
+</div>
 
- </mat-sidenav-container>
+<div class="dash" *ngIf="dashboard">
+    <mat-sidenav-container class = "tp-container">
+        <mat-sidenav mode = "side" opened>
+            <section class="Profile_pic"><img src="assets/icon.png" id="shrt_img"></section>
+           <section class = "tp-section" (click)="showPrfl()">
+              <span id="profile" >Profile</span>
+           </section>
+           <section class = "tp-section"(click)="showPrjt()">
+              <span id="Projects" >My Projects</span>
+           </section>
+           <section class = "tp-section">
+            <span id="logout">Logout</span>
+         </section>
+        </mat-sidenav>
+        <div class="profile" *ngIf="profileWind">
+            <mat-card id="prfl_card">
+                      <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>Student</h4></div></div>
+                      <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>Paresh Pandit</h4></div></div>
+                      <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>PareshPandit58@gmail.com</h4></div></div>
+                      <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>MIT WPU</h4></div></div>
+                      <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>FY MSC</h4></div></div>
+             </mat-card>
+        </div>
+        <div class="peojects" *ngIf="projectWind">
+          <mat-card id="prjt_list" >
+                <mat-card-header id="header">My Project List</mat-card-header>
+                <mat-card id="prjt_crd">
+                   <img id="prjt_cv_img"src="assets/logo.png">
+                   <div class="prjt_data">
+                      <h2>{{ProjectName}}</h2>
+                      <h5>Category : {{ProjectCat}}</h5>
+                      <h5>Summery : {{ProjectSumm}}</h5>
+                      <h5>Author : {{ProjectAuth}}</h5>
+                   </div>
+                </mat-card>
+    
+    
+          </mat-card>
+          <mat-card id="upload">
+             <mat-card-header id="header">Upload Your Project here</mat-card-header>
+             <div class="cv_img">
+                <div class="ic">
+                   <img src="assets/up_ic.png">
+                   <h3>Upload Cover Image</h3>
+                </div>
+             </div>
+             <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
+             <div class="prjt_sum">Project Summery<input type="text" placeholder="Project Summery" #psumm></div>
+             <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
+             <div class="prjt_cat">Project Category<input type="text" placeholder="Select Category" #pcat></div>
+             <div class="prjt_att">Attach Files<img src="assets/att.png"></div>
+             <button id="btn_upload" mat-button (click)="upload(pname.value,pdescr.value,pcat.value)">Uplaod</button>
+          </mat-card>
+        </div>
+     </mat-sidenav-container>
+</div>
+

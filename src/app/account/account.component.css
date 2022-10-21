@@ -1,143 +1,317 @@
-
-#shrt_img{
-  margin-left: 30%;
-  height: 100px;
-  width: 100px;
-}
-
-.tp-container {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-}
-.tp-section {
-  background-color: rgb(236, 79, 79);
-  padding: 10px;
-  margin-top: 5px;
-  width:200px;   
-  text-align: center;
-  cursor: pointer;
-  color: #eee;
-}
-
-#prfl_card{
-  margin: 10px;
-  height: 150px;
-}
-
-
-.box{
-  border-radius: 8px;
-  float: left;
-  margin-left: 10px;
-  border: 2px solid;
-  border-color: white;
-  width: 200px;
-}
-
-.txt{  
-  padding: 4px;
+body
+{
   color: white;
-  border-radius: 8px 8px 0px 0px;
-  text-align: center;
-  height: 20px;
-  width: 100%;
-  background-color: rgb(236, 79, 79);
+  margin: 0px;
+  font-family: MILanPro_SEMIBOLD,Microsoft YaHei;
 }
 
-#data{
-  width: 100%;
-  padding: 3px;
-  border: 1px solid rgb(192, 137, 137);
-  text-align: center;
-  border-radius: 0px 0px 8px 8px;
+.container
+{
+  background-color: black;
+  height: 850px
 }
 
-#prjt_list{
-  margin: 10px;;
-  width:45%;
-  float:left;
-}
-
-#upload{
+.logo_area
+{
+  float: left;
   margin: 10px;
-  width:45%;
-  float:left;
+  margin-left: 40%;
+  height: 30px;
+  width: 300px;
+  background-color: white;
 }
-.prjt_name,.prjt_descr, .prjt_cat,.prjt_att,.prjt_sum{
-  color: rgb(192, 137, 137);
+
+.nav_bar
+{
+  height: 50px;
+  width: 100%;
+  background-color:  #ef0606;
+}
+
+.sgn_up
+{
+    width: 50%;
+    height: 700px;
+    float: left;
+}
+
+.model
+{
+  margin: 80px;
+  height: 720px;
+  width:  70%;
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: red;
+}
+
+.sgn_up_name
+{
+  margin-top: 20px;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  font-family: MILanPro_SEMIBOLD,Microsoft YaHei;
+  font-size: 30px;
+}
+
+#content
+{
   margin-top: 10px;
+  margin-left: 20px;
+  font-size: 20px;
 }
-input[type="text"]
+
+.lname
+{
+  margin-top: 20px;
+}
+
+.c_pass
+{
+  margin-top: 20px;
+}
+
+.sgn_in
+{
+  width: 50%;
+  height: 700px;
+  float: right;
+}
+
+.sgnin_model
+{
+  margin-top: 150px;
+  margin-left: 100px;
+  height: 400px;
+  width:  70%;
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: red;
+}
+
+.sgnin_name
+{
+  margin-top:  20px;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  font-family: MILanPro_SEMIBOLD,Microsoft YaHei;
+  font-size: 30px;
+}
+
+#content1,#content2
+{
+  margin-top: 25px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"]
 {
   outline: none;
-  border:1px solid rgb(192, 137, 137);
   height: 25px;
-  width: 99%;
-}
-#header{
-  padding: 4px;
-  background-color: rgb(236, 79, 79);
-  color: #eee;
-  border-radius:8px 8px 0px 0px ;
-}
-
-#btn_upload{
-  color: #eee;
-  margin-top: 10px;
-  width: 100%;
-  height: 30px;
-  background-color: rgb(236, 79, 79);
-}
-
-.cv_img{
-  cursor: pointer;
-  border:1px solid rgb(192, 137, 137);
-  margin-top: 10px;
-  height: 100px;
-  width: 100%;
-}
-
-.ic{
-  margin-top: 10px;
-  margin-left: 45%;
-  height: auto;
-  width: auto;
-}
-.ic img{
-  height: 50px;
-  width: 50px;
-}
-
-.cv_img:hover{
-  box-shadow: 0 4px 8px 0 rgba(192, 137, 137), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.prjt_att img{
-  margin-left: 10px;
-  height: 20px;
- 
-  cursor: pointer;
-}
-#prjt_crd{
-  margin: 5px;
-  height: 150px;
   width: 95%;
-  box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-#prjt_cv_img{
+.fr_pass
+{
+  height:15px;
+float: right;
+margin-right:15px;
+margin-top: 20px;
+}
+
+button
+{
+  height: 30px;
+  width: 95%;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  border-radius: 100px;
+}
+
+button:hover
+{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.footer
+{
+  text-align: center;
+  float: right;
+  margin-top: 50px;
+  height: 50px;
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+
+hr
+{
+  margin-top: 100px;
+  height: 500px;
+  width: 2px;
+  float:left;
+}
+
+.tag_ln
+{
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/*  */
+.dash{
+  width: 100%;
   height: 100%;
-  width: 150px;
-  float: left;
-  border-radius: 8px 0px 0px 8px;
 }
-.prjt_data{
-  color: rgba(192, 137, 137);
-  float: left;
-  margin-left: 10px;
-}
+#shrt_img{
+    margin-left: 30%;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .tp-container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .tp-section {
+    background-color: rgb(236, 79, 79);
+    padding: 10px;
+    margin-top: 5px;
+    width:200px;   
+    text-align: center;
+    cursor: pointer;
+    color: #eee;
+  }
+  
+  #prfl_card{
+    margin: 10px;
+    height: 150px;
+  }
+  
+  
+  .box{
+    border-radius: 8px;
+    float: left;
+    margin-left: 10px;
+    border: 2px solid;
+    border-color: white;
+    width: 200px;
+  }
+  
+  .txt{  
+    padding: 4px;
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+    height: 20px;
+    width: 100%;
+    background-color: rgb(236, 79, 79);
+  }
+  
+  #data{
+    width: 100%;
+    padding: 3px;
+    border: 1px solid rgb(192, 137, 137);
+    text-align: center;
+    border-radius: 0px 0px 8px 8px;
+  }
+  
+  #prjt_list{
+    margin: 10px;;
+    width:45%;
+    float:left;
+  }
+  
+  #upload{
+    margin: 10px;
+    width:45%;
+    float:left;
+  }
+  .prjt_name,.prjt_descr, .prjt_cat,.prjt_att,.prjt_sum{
+    color: rgb(192, 137, 137);
+    margin-top: 10px;
+  }
+  input[type="text"]
+  {
+    outline: none;
+    border:1px solid rgb(192, 137, 137);
+    height: 25px;
+    width: 99%;
+  }
+  #header{
+    padding: 4px;
+    background-color: rgb(236, 79, 79);
+    color: #eee;
+    border-radius:8px 8px 0px 0px ;
+  }
+  
+  #btn_upload{
+    color: #eee;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(236, 79, 79);
+  }
+  
+  .cv_img{
+    cursor: pointer;
+    border:1px solid rgb(192, 137, 137);
+    margin-top: 10px;
+    height: 100px;
+    width: 100%;
+  }
+  
+  .ic{
+    margin-top: 10px;
+    margin-left: 45%;
+    height: auto;
+    width: auto;
+  }
+  .ic img{
+    height: 50px;
+    width: 50px;
+  }
+  
+  .cv_img:hover{
+    box-shadow: 0 4px 8px 0 rgba(192, 137, 137), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .prjt_att img{
+    margin-left: 10px;
+    height: 20px;
+   
+    cursor: pointer;
+  }
+  #prjt_crd{
+    margin: 5px;
+    height: 150px;
+    width: 95%;
+    box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  #prjt_cv_img{
+    height: 100%;
+    width: 150px;
+    float: left;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .prjt_data{
+    color: rgba(192, 137, 137);
+    float: left;
+    margin-left: 10px;
+  }
+  

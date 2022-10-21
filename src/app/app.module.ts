@@ -7,7 +7,6 @@ import { TrendingProjectsComponent } from './trending-projects/trending-projects
 import { ProjectDescriptionComponent } from './project-description/project-description.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormComponent } from './form/form.component';
 import { FormGroup, FormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -20,6 +19,7 @@ import { MatSidenavModule }  from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
     ProjectDescriptionComponent,
     FeedbackComponent,
     FooterComponent,
-    FormComponent,
     BannerComponent,
-    AccountComponent
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
