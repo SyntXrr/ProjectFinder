@@ -30,6 +30,7 @@ export class AccountComponent implements OnInit {
   password:String="";
 
   signup(fnm:String,lnm:String,eml:String,usrName:String,pass:String,cnfpss:String,usrtp:String,clg:string,cls:String){
+   if(pass===cnfpss){
     this.Fname=fnm;
     this.Lname=lnm;
     this.Email=eml;
@@ -46,12 +47,13 @@ export class AccountComponent implements OnInit {
       UserName:this.Uname,
       Email:this.Email,
       Password:this.Password,
-      ConfirmPassword:this.CnfPasswaord,
       UserType:this.Usertype,
       College:this.college,
       Class:this.class
     });
     alert("Account Created Successfully. Plase Login");
+  }
+  else{alert("Password and Confirm Password Not Match")}
   }
 
   UserType:String="";
@@ -118,7 +120,7 @@ export class AccountComponent implements OnInit {
       ProjectCategory:this.projectCategory,
       Author:this.Name
     });
-    set(ref(this.database, 'users/' + this.userId  + '/Projects'),{
+    set(ref(this.database, 'users/' + this.userId  + '/Projects/' + this.projectName),{
       ProjectName:this.projectName,
       ProjectDescription:this.projectDescription,
       ProjectSummery: this.projectSummery,
