@@ -54,6 +54,12 @@ export class AccountComponent implements OnInit {
     alert("Account Created Successfully. Plase Login");
   }
 
+  UserType:String="";
+  Name:String="";
+  PEmail:String="";
+  College:String="";
+  Class:String="";
+
  login(usrId:String,pass:String){
     this.userId=usrId;
     this.password=pass;
@@ -64,6 +70,11 @@ export class AccountComponent implements OnInit {
           alert("Login Successfull");
           this.form=false;
           this.dashboard=true;
+          this.UserType=data.UserType;
+          this.Name=data.FirstName+" "+data.LastName;
+          this.PEmail=data.Email;
+          this.College=data.College;
+          this.Class=data.Class;
         }
         else{
           alert("Invalid Credentials");

@@ -61,11 +61,11 @@
         </mat-sidenav>
         <div class="profile" *ngIf="profileWind">
             <mat-card id="prfl_card">
-                      <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>Student</h4></div></div>
-                      <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>Paresh Pandit</h4></div></div>
-                      <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>PareshPandit58@gmail.com</h4></div></div>
-                      <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>MIT WPU</h4></div></div>
-                      <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>FY MSC</h4></div></div>
+                      <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>{{UserType}}</h4></div></div>
+                      <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>{{Name}}</h4></div></div>
+                      <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>{{PEmail}}</h4></div></div>
+                      <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>{{College}}</h4></div></div>
+                      <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>{{Class}}</h4></div></div>
              </mat-card>
         </div>
         <div class="peojects" *ngIf="projectWind">
