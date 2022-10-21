@@ -1,11 +1,11 @@
 <mat-sidenav-container class = "tp-container">
     <mat-sidenav mode = "side" opened>
         <section class="Profile_pic"><img src="assets/icon.png" id="shrt_img"></section>
-       <section class = "tp-section">
-          <span id="profile" (click)="showPrfl()">Profile</span>
+       <section class = "tp-section" (click)="showPrfl()">
+          <span id="profile" >Profile</span>
        </section>
-       <section class = "tp-section">
-          <span id="Projects" (click)="showPrjt()">Projects</span>
+       <section class = "tp-section"(click)="showPrjt()">
+          <span id="Projects" >Projects</span>
        </section>
        <section class = "tp-section">
         <span id="logout">Logout</span>
@@ -21,15 +21,21 @@
          </mat-card>
     </div>
     <div class="peojects" *ngIf="projectWind">
-      <mat-card id="prjt_list">
-            <mat-card-header>My Project List</mat-card-header>
+      <mat-card id="prjt_list" >
+            <mat-card-header id="header">My Project List</mat-card-header>
       </mat-card>
       <mat-card id="upload">
-         <mat-card-header>Upload Your Project here</mat-card-header>
+         <mat-card-header id="header">Upload Your Project here</mat-card-header>
+         <div class="cv_img">
+            <div class="ic">
+               <img src="assets/up_ic.png">
+               <h3>Upload Cover Image</h3>
+            </div>
+         </div>
          <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
          <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
-         <div class="prjt_cat">Project Category<input type="text" placeholder="Project Category" #pcat></div>
-         <button mat-button (click)="upload(pname.value,pdescr.value,pcat.value)">Uplaod</button>
+         <div class="prjt_cat">Project Category<input type="text" placeholder="Select Category" #pcat></div>
+         <button id="btn_upload" mat-button (click)="upload(pname.value,pdescr.value,pcat.value)">Uplaod</button>
       </mat-card>
     </div>
 
