@@ -17,6 +17,7 @@ export class FeedbackComponent implements OnInit {
       ID:1
     }
   ]
+  
   sub(a:any,b:any,c:any){
    let tem_struct = {
       name:b,

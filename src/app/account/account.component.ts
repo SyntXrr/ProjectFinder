@@ -41,6 +41,20 @@ export class AccountComponent implements OnInit {
   userId:String="";
   password:String="";
 
+  
+  Projects = [
+    {
+      cv:''
+    }
+  ]
+  
+  Prdata(cv:any){
+   let projects = {
+      cv:cv
+    }
+    this.Projects.push(projects);
+  }
+
  login(usrId:String,pass:String){
     this.userId=usrId;
     this.password=pass;
@@ -61,9 +75,25 @@ export class AccountComponent implements OnInit {
           alert("Invalid Credentials");
         }
     });
+    const DB1 = ref(this.database, 'users/' + this.userId  + '/Projects');
+    onValue(DB1, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        const childKey = childSnapshot.key;
+        const DB2 = ref(this.database, 'users/' + this.userId  + '/Projects/'+ childKey);
+        onValue(DB2, (snapshot) => {
+          snapshot.forEach((childSnapshot) => {
+            const childData = childSnapshot.val();
+            this.Prdata(childData);
+          });
+    }, {
+      onlyOnce: true
+    });
+      });
+    }, {
+      onlyOnce: true
+    });
+   
   }
-  
-  
   ProjectName:String="ProjectFinder";
   ProjectCat:String="Computer Science";
   ProjectSumm:String="Project Showcase for college Student";

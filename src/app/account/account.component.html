@@ -66,6 +66,7 @@
                       <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>{{Class}}</h4></div></div>
              </mat-card>
         </div>
+
         <div class="peojects" *ngIf="projectWind">
           <mat-card id="prjt_list" >
                 <mat-card-header id="header">My Project List</mat-card-header>
@@ -78,7 +79,13 @@
                       <h5>Author : {{ProjectAuth}}</h5>
                    </div>
                 </mat-card>
-          </mat-card>
+
+                <div class ="r1"  id="TR"  *ngFor ="let card of Projects">
+                  <div class="Pdata">{{card.cv}}</div>
+                  </div>
+               </mat-card>
+
+
           <mat-card id="upload">
              <mat-card-header id="header">Upload Your Project here</mat-card-header>
              <div class="cv_img">
