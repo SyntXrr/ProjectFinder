@@ -68,23 +68,17 @@
         </div>
 
         <div class="peojects" *ngIf="projectWind">
-          <mat-card id="prjt_list" >
-                <mat-card-header id="header">My Project List</mat-card-header>
-                <mat-card id="prjt_crd">
-                   <img id="prjt_cv_img"src="assets/logo.png">
-                   <div class="prjt_data">
-                      <h2>{{ProjectName}}</h2>
-                      <h5>Category : {{ProjectCat}}</h5>
-                      <h5>Summery : {{ProjectSumm}}</h5>
-                      <h5>Author : {{ProjectAuth}}</h5>
-                   </div>
-                </mat-card>
-
-                <div class ="r1"  id="TR"  *ngFor ="let card of Projects">
-                  <div class="Pdata">{{card.cv}}</div>
+          <mat-card id="prjt_list">
+            <mat-card-header id="header">My Project List</mat-card-header>
+               <mat-card id="prjt_crd">
+                  <div class="img">
+                    <img id="prjt_cv_img"src="assets/logo.png">
                   </div>
+                   <div class="prjt_data" *ngFor ="let card of Projects">
+                     <div class="Pdata">{{card.cv}}</div>
+                   </div>
                </mat-card>
-
+          </mat-card>
 
           <mat-card id="upload">
              <mat-card-header id="header">Upload Your Project here</mat-card-header>

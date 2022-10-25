@@ -15,7 +15,7 @@ export class AccountComponent implements OnInit {
    form:boolean=true;
    
   router: any;
-  
+
   signup(fnm:String,lnm:String,eml:String,pass:String,cnfpss:String,usrtp:String,clg:string,cls:String){
    if(pass===cnfpss){
     set(ref(this.database,'users/' + eml +'/Profile'), {
@@ -37,11 +37,9 @@ export class AccountComponent implements OnInit {
   PEmail:String="";
   College:String="";
   Class:String="";
-
   userId:String="";
   password:String="";
 
-  
   Projects = [
     {
       cv:''
@@ -49,10 +47,10 @@ export class AccountComponent implements OnInit {
   ]
   
   Prdata(cv:any){
-   let projects = {
+   let project= {
       cv:cv
     }
-    this.Projects.push(projects);
+    this.Projects.push(project);
   }
 
  login(usrId:String,pass:String){
@@ -82,7 +80,8 @@ export class AccountComponent implements OnInit {
         const DB2 = ref(this.database, 'users/' + this.userId  + '/Projects/'+ childKey);
         onValue(DB2, (snapshot) => {
           snapshot.forEach((childSnapshot) => {
-            const childData = childSnapshot.val();
+            const childKey = childSnapshot.key;
+            const childData = childKey+ ' : ' +childSnapshot.val();
             this.Prdata(childData);
           });
     }, {
@@ -92,12 +91,7 @@ export class AccountComponent implements OnInit {
     }, {
       onlyOnce: true
     });
-   
-  }
-  ProjectName:String="ProjectFinder";
-  ProjectCat:String="Computer Science";
-  ProjectSumm:String="Project Showcase for college Student";
-  ProjectAuth:String="Kunal kohinkar";
+ }
 
   profileWind:boolean=true;
   projectWind:boolean=false;
@@ -122,10 +116,10 @@ export class AccountComponent implements OnInit {
       Author:this.Name
     });
     set(ref(this.database, 'users/' + this.userId  + '/Projects/' + pname),{
-      ProjectName:pname,
-      ProjectDescription:pdesc,
-      ProjectSummery: psumm,
-      ProjectCategory:this.projectCategory,
+      Name:pname,
+      Description:pdesc,
+      Summery: psumm,
+      Category:this.projectCategory,
       Author:this.Name
     });
     alert("Project Uploaded Succesfully");

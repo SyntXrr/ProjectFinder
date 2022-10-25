@@ -38,7 +38,7 @@ body
 .model
 {
   margin: 80px;
-  height: 720px;
+  height: 650px;
   width:  70%;
   border-radius: 10px;
   border: 2px solid;
@@ -83,7 +83,7 @@ body
 {
   margin-top: 150px;
   margin-left: 100px;
-  height: 400px;
+  height: 350px;
   width:  70%;
   border-radius: 10px;
   border: 2px solid;
@@ -298,25 +298,35 @@ hr
     height: 20px;
     cursor: pointer;
   }
+
   #prjt_crd{
     margin: 5px;
     height: 150px;
-    width: 95%;
     box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
-  
+  .img{
+    height: 100%;
+    width: 30%;
+    float: left;
+  }
   #prjt_cv_img{
     height: 100%;
-    width: 150px;
-    float: left;
+    width: 100%;
     border-radius: 8px 0px 0px 8px;
   }
+
   .prjt_data{
+    width: 70%;
     color: rgba(192, 137, 137);
-    float: left;
-    margin-left: 10px;
+    float: right;
+  }  
+
+  .Pdata{
+      margin: 3px;
+      margin-left: 5px;
+      font-weight: bold;
   }
-  
+
 #sltCat{
     outline: none;
     border:1px solid rgb(192, 137, 137);
