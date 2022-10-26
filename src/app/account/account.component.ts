@@ -1,3 +1,4 @@
+import { NONE_TYPE } from "@angular/compiler";
 import { Component, OnInit } from "@angular/core";
 import { Database,set,ref,onValue } from '@angular/fire/database';
 
@@ -7,7 +8,7 @@ import { Database,set,ref,onValue } from '@angular/fire/database';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-
+  
   constructor(public database:Database) {}   
    ngOnInit(): void {}
 
@@ -42,16 +43,26 @@ export class AccountComponent implements OnInit {
 
   Projects = [
     {
-      cv:''
+      pn:'Name',
+      ps:'Category',
+      pd:'Summery',
+      pc:'Descriprion',
+      pa:'Author'
     }
   ]
   
-  Prdata(cv:any){
+  Prdata(pn:any,ps:any,pd:any,pc:any,pa:any){
    let project= {
-      cv:cv
+      pn:pn,
+      ps:ps,
+      pd:pd,
+      pc:pc,
+      pa:pa
     }
     this.Projects.push(project);
   }
+
+  PName:String='';PSumm:String='';PCat:String='';PDes:String='';Pauth:String='';
 
  login(usrId:String,pass:String){
     this.userId=usrId;
@@ -61,7 +72,7 @@ export class AccountComponent implements OnInit {
       const data = snapshot.val();
         if(this.password===data.Password){
           alert("Login Successfull");
-          this.form=false;
+            this.form=false;
           this.dashboard=true;
           this.UserType=data.UserType;
           this.Name=data.FirstName+" "+data.LastName;
@@ -80,10 +91,22 @@ export class AccountComponent implements OnInit {
         const DB2 = ref(this.database, 'users/' + this.userId  + '/Projects/'+ childKey);
         onValue(DB2, (snapshot) => {
           snapshot.forEach((childSnapshot) => {
-            const childKey = childSnapshot.key;
-            const childData = childKey+ ' : ' +childSnapshot.val();
-            this.Prdata(childData);
-          });
+            if(childSnapshot.key==='Name'){
+                  this.PName= childSnapshot.key + " : " + childSnapshot.val();
+            }
+            if(childSnapshot.key==='Summery'){
+              this.PSumm= childSnapshot.key + " : " +childSnapshot.val();
+            }
+            if(childSnapshot.key==='Description'){
+              this.PDes= childSnapshot.key + " : " +childSnapshot.val();
+            }
+            if(childSnapshot.key==='Category'){
+              this.PCat= childSnapshot.key + " : " +childSnapshot.val();
+            }
+            if(childSnapshot.key==='Author'){
+              this.Pauth= childSnapshot.key + " : " +childSnapshot.val();
+            }
+          });  this.Prdata(this.PName,this.PSumm,this.PDes,this.PCat,this.Pauth);
     }, {
       onlyOnce: true
     });
@@ -91,7 +114,8 @@ export class AccountComponent implements OnInit {
     }, {
       onlyOnce: true
     });
- }
+  }
+
 
   profileWind:boolean=true;
   projectWind:boolean=false;
@@ -109,10 +133,10 @@ export class AccountComponent implements OnInit {
   projectCategory:String="";
   upload(pname:String,psumm:string,pdesc:String){
     set(ref(this.database, 'Projects/' + this.projectCategory + '/'+ pname), {
-      ProjectName:pname,
-      ProjectDescription:pdesc,
-      ProjectSummery: psumm,
-      ProjectCategory:this.projectCategory,
+      Name:pname,
+      Description:pdesc,
+      Summery: psumm,
+      Category:this.projectCategory,
       Author:this.Name
     });
     set(ref(this.database, 'users/' + this.userId  + '/Projects/' + pname),{
