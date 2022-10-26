@@ -109,6 +109,7 @@ body
 
 .frm input[type="text"], input[type="email"], input[type="password"]
 {
+  border-radius: 8px;
   font-family:  'Roboto', sans-serif;
   font-weight: bold;
   color: rgb(192, 137, 137);
@@ -134,7 +135,7 @@ button
   outline: none;
   background-color: red;
   color: white;
-  border-radius: 100px;
+  border-radius: 8px;
 }
 
 button:hover
@@ -143,24 +144,7 @@ button:hover
   opacity: 0.7;
 }
 
-.footer
-{
-  text-align: center;
-  float: right;
-  margin-top: 50px;
-  height: 50px;
-  width: 100%;
-  background-color: red;
-  color: white;
-}
 
-hr
-{
-  margin-top: 100px;
-  height: 500px;
-  width: 2px;
-  float:left;
-}
 
 .tag_ln
 {
@@ -246,6 +230,7 @@ hr
     float:left;
   }
   #upload input[type='text']{
+    border-radius: 8px;    
     font-family:  'Roboto', sans-serif;
     font-weight: bold;
     color: rgb(192, 137, 137);
@@ -254,6 +239,7 @@ hr
   .prjt_name,.prjt_descr, .prjt_cat,.prjt_att,.prjt_sum{
     color: rgb(192, 137, 137);
     margin-top: 10px;
+
   }
 
   input[type="text"]

@@ -79,11 +79,16 @@ export class AccountComponent implements OnInit {
           this.PEmail=data.Email;
           this.College=data.College;
           this.Class=data.Class;
+          this.showPrjts();
         }
         else{
           alert("Invalid Credentials");
         }
     });
+   
+  }
+
+  showPrjts(){
     const DB1 = ref(this.database, 'users/' + this.userId  + '/Projects');
     onValue(DB1, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
@@ -115,7 +120,6 @@ export class AccountComponent implements OnInit {
       onlyOnce: true
     });
   }
-
 
   profileWind:boolean=true;
   projectWind:boolean=false;
