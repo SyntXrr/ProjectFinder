@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { TrendingProjectsComponent } from './trending-projects/trending-projects.component';
-import { ProjectDescriptionComponent } from './project-description/project-description.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormGroup, FormsModule } from '@angular/forms';
@@ -25,7 +24,6 @@ import { MatButtonModule } from '@angular/material/button';
     AppComponent,
     SearchBarComponent,
     TrendingProjectsComponent,
-    ProjectDescriptionComponent,
     FeedbackComponent,
     FooterComponent,
     BannerComponent,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Database,set,ref,onValue } from '@angular/fire/database';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public database:Database) {}  
   ngOnInit(): void {
+  }
+
+  Projects = [
+    {
+      pn:'Name',
+      ps:'Category',
+      pd:'Summery',
+      pc:'Descriprion',
+      pa:'Author'
+    }
+  ]
+  
+  Prdata(pn:any,ps:any,pd:any,pc:any,pa:any){
+   let project= {
+      pn:pn,
+      ps:ps,
+      pd:pd,
+      pc:pc,
+      pa:pa
+    }
+    this.Projects.push(project);
   }
 
   header="Explore !";
@@ -26,27 +47,54 @@ export class SearchBarComponent implements OnInit {
   showST:boolean=false;
   showNT:boolean=false;
 
-  srch_flag:boolean=true;
-  searchflag:boolean=true;
-  srchCSflag:boolean=false;
+  srchFlag:boolean=true;
+  listFlag:boolean=false;
   prjtDesrcFlag:boolean=false;
 
-  shoSrchCS(){
-    this.srch_flag=false;
-    this.srchCSflag=true;
+  showList(catName:String){
+    this.srchFlag=false;
+    this.listFlag=true;
+    this.displayList(catName);
   }
 
-  projectName:string="Project Finder";
-  projectName2:string="Kass OTT";
-  author:string="Auther : Paresh Pandit, Akash Bhosale, Chaitanya Kulkarni";
-  author2:string="Auther : Shivam Pawar, Sahil Birnale, Khushi Varma, Aditya Babar";
-  Tech:string="Angular";
-
   showProjectDesc(){
-    this.srchCSflag=false;
+    this.listFlag=false;
     this.prjtDesrcFlag=true;
   }
 
-
-
+  CatList:String='';
+  PName:String='';PSumm:String='';PCat:String='';PDes:String='';Pauth:String='';
+  displayList(catName:String){
+    this.CatList=catName;
+    const DB1 = ref(this.database, 'Projects/' + catName);
+    onValue(DB1, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        const childKey = childSnapshot.key;
+        const DB2 = ref(this.database,  'Projects/' + catName + '/' + childKey);
+        onValue(DB2, (snapshot) => {
+          snapshot.forEach((childSnapshot) => {
+            if(childSnapshot.key==='Name'){
+                  this.PName= childSnapshot.key + " : " + childSnapshot.val();
+            }
+            if(childSnapshot.key==='Summery'){
+              this.PSumm= childSnapshot.key + " : " +childSnapshot.val();
+            }
+            if(childSnapshot.key==='Description'){
+              this.PDes= childSnapshot.key + " : " +childSnapshot.val();
+            }
+            if(childSnapshot.key==='Category'){
+              this.PCat= childSnapshot.key + " : " +childSnapshot.val();
+            }
+            if(childSnapshot.key==='Author'){
+              this.Pauth= childSnapshot.key + " : " +childSnapshot.val();
+            }
+          });  this.Prdata(this.PName,this.PSumm,this.PDes,this.PCat,this.Pauth);
+    }, {
+      onlyOnce: true
+    });
+      });
+    }, {
+      onlyOnce: true
+    });
+  }
 }

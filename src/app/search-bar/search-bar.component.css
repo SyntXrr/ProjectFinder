@@ -9,7 +9,6 @@
     text-align: center;
 }
 
-
 .cat_cart
 {
   cursor:pointer;
@@ -25,7 +24,6 @@
 {
   border-radius: 10px;
 }
-
 
 #nameplate, #nameplate1, #nameplate2, #nameplate3, #nameplate4, #nameplate5, #nameplate6, #nameplate7, #nameplate8, #nameplate9, #nameplate10, #nameplatea
 {
@@ -310,4 +308,50 @@ animation-fill-mode: forwards;
   height: 90px;
   width: 90px;
   float: left;
+}
+
+#prjt_list{
+  margin: 10px;;
+  width:100%;
+  float:left;
+}
+  #header{
+  padding: 4px;
+  background-color: rgb(236, 79, 79);
+  color: #eee;
+  border-radius:8px 8px 0px 0px ;
+}
+#prjt_crd{
+  margin: 5px;
+  height: 150px;
+  
+  box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img{
+  height: 100%;
+  width: 30%;
+  float: left;
+}
+#prjt_cv_img{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.prjt_data{
+  width: 70%;
+  color: rgba(192, 137, 137);
+  float: right;
+}  
+
+.Pdata{
+    margin: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.srchList{
+  margin: auto;
+  width: 50%;
 }

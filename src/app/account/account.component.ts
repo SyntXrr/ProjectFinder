@@ -1,4 +1,3 @@
-import { NONE_TYPE } from "@angular/compiler";
 import { Component, OnInit } from "@angular/core";
 import { Database,set,ref,onValue } from '@angular/fire/database';
 
