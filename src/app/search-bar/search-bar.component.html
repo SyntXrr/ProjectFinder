@@ -27,10 +27,10 @@
       </div>
     
       <div class="d5">
-        <div class="cat_cart" id="fd" (mouseover)="showFD=true" (mouseout)="showFD=false"><div class="Text" *ngIf="showFD" (click)="showList('Food Processing')">Food Processing</div><img src="assets/food.png" width="100%" height="100%"></div>
-        <div class="cat_cart" id="bt" (mouseover)="showBT=true" (mouseout)="showBT=false"><div class="Text" *ngIf="showBT" (click)="showList('Bio Technology')">Bio Technology</div><img src="assets/bio.png" width="100%" height="100%"></div>
-        <div class="cat_cart" id="nt" (mouseover)="showNT=true" (mouseout)="showNT=false"><div class="Text" *ngIf="showNT" (click)="showList('Nano Science')">Nano Technology</div><img src="assets/nano.jpg" width="100%" height="100%"></div>
-        <div class="cat_cart" id="st" (mouseover)="showST=true" (mouseout)="showST=false"><div class="Text" *ngIf="showST" (click)="showList('Statistics')">Statistics</div><img src="assets/stat.jpg" width="100%" height="100%"></div>
+        <div class="cat_cart" id="fd" (mouseover)="showFD=true" (mouseout)="showFD=false" (click)="showList('Food Processing')"><div class="Text" *ngIf="showFD">Food Processing</div><img src="assets/food.png" width="100%" height="100%"></div>
+        <div class="cat_cart" id="bt" (mouseover)="showBT=true" (mouseout)="showBT=false" (click)="showList('Bio Technology')"> <div class="Text" *ngIf="showBT" >Bio Technology</div><img src="assets/bio.png" width="100%" height="100%"></div>
+        <div class="cat_cart" id="nt" (mouseover)="showNT=true" (mouseout)="showNT=false" (click)="showList('Bio Technology')"><div class="Text" *ngIf="showNT" (click)="showList('Nano Science')">Nano Science</div><img src="assets/nano.jpg" width="100%" height="100%"></div>
+        <div class="cat_cart" id="st" (mouseover)="showST=true" (mouseout)="showST=false" (click)="showList('Bio Technology')"><div class="Text" *ngIf="showST" (click)="showList('Statistics')">Statistics</div><img src="assets/stat.jpg" width="100%" height="100%"></div>
       </div>
   </div>
 </div>

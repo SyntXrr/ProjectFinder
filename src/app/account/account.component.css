@@ -8,24 +8,7 @@ body
 .container
 {
   background-color: black;
-  height: 850px
-}
-
-.logo_area
-{
-  float: left;
-  margin: 10px;
-  margin-left: 40%;
-  height: 30px;
-  width: 300px;
-  background-color: white;
-}
-
-.nav_bar
-{
-  height: 50px;
-  width: 100%;
-  background-color:  #ef0606;
+  height: 750px
 }
 
 .sgn_up
