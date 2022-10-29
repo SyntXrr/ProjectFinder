@@ -325,7 +325,11 @@ animation-fill-mode: forwards;
   margin: 5px;
   height: 150px;
   cursor: pointer;
-  box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 1px 2px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#prjt_crd:hover{
+  box-shadow: 0 4px 6px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .img{
@@ -346,9 +350,7 @@ animation-fill-mode: forwards;
 }  
 
 .Pdata{
-    margin: 3px;
-    margin-left: 5px;
-    font-weight: bold;
+    margin-left: 8px;
 }
 
 .srchList{
@@ -357,6 +359,8 @@ animation-fill-mode: forwards;
 }
 
 .prjts_des{
+  height: 100%;
+  width: 100%;
 background-color: #f1f1f1;
 }
 
@@ -408,6 +412,15 @@ height: 200px;
 .prjt_desc{
   font-size: 20px;
   padding: 8px;
+  border-radius: 0px 0px 0px 0px;
+  text-align: center;
+  background-color: rgb(216, 215, 215);
+  margin-top: 2px;
+}
+
+.prjt_auth{
+  font-size: 20px;
+  padding: 8px;
   border-radius: 0px 0px 8px 8px;
   text-align: center;
   background-color: rgb(216, 215, 215);
@@ -417,4 +430,9 @@ height: 200px;
 #tabs{
   margin-left: 15%;
   margin-right: 15%;
+}
+
+#prjtDes p{
+  font-size: 15px;
+
 }
