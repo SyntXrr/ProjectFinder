@@ -15,18 +15,16 @@ export class SearchBarComponent implements OnInit {
   Projects = [
     {
       pn:'Name',
-      ps:'Category',
-      pd:'Summery',
-      pc:'Descriprion',
+      pc:'Category',
+      ps:'Summery',
       pa:'Author'
     }
   ]
   
-  Prdata(pn:any,ps:any,pd:any,pc:any,pa:any){
+  Prdata(pn:any,ps:any,pc:any,pa:any){
    let project= {
       pn:pn,
       ps:ps,
-      pd:pd,
       pc:pc,
       pa:pa
     }
@@ -63,7 +61,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   CatList:String='';
-  PName:String='';PSumm:String='';PCat:String='';PDes:String='';Pauth:String='';
+  PName:String='';PSumm:String='';PCat:String='';Pauth:String='';
   displayList(catName:String){
     this.CatList=catName;
     const DB1 = ref(this.database, 'Projects/' + catName);
@@ -79,16 +77,13 @@ export class SearchBarComponent implements OnInit {
             if(childSnapshot.key==='Summery'){
               this.PSumm= childSnapshot.val();
             }
-            if(childSnapshot.key==='Description'){
-             this.PDes= childSnapshot.val();
-            }
             if(childSnapshot.key==='Category'){
               this.PCat = childSnapshot.val();
             }
             if(childSnapshot.key==='Author'){
               this.Pauth= childSnapshot.val();
             }
-          });  this.Prdata(this.PName,this.PSumm,this.PDes,this.PCat,this.Pauth);
+          });  this.Prdata(this.PName,this.PSumm,this.PCat,this.Pauth);
     }, {
       onlyOnce: true
     });

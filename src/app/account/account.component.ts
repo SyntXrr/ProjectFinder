@@ -96,19 +96,19 @@ export class AccountComponent implements OnInit {
         onValue(DB2, (snapshot) => {
           snapshot.forEach((childSnapshot) => {
             if(childSnapshot.key==='Name'){
-                  this.PName= childSnapshot.key + " : " + childSnapshot.val();
+                  this.PName=  childSnapshot.val();
             }
             if(childSnapshot.key==='Summery'){
-              this.PSumm= childSnapshot.key + " : " +childSnapshot.val();
+              this.PSumm=  childSnapshot.val();
             }
             if(childSnapshot.key==='Description'){
-              this.PDes= childSnapshot.key + " : " +childSnapshot.val();
+              this.PDes= childSnapshot.val();
             }
             if(childSnapshot.key==='Category'){
-              this.PCat= childSnapshot.key + " : " +childSnapshot.val();
+              this.PCat= childSnapshot.val();
             }
             if(childSnapshot.key==='Author'){
-              this.Pauth= childSnapshot.key + " : " +childSnapshot.val();
+              this.Pauth= childSnapshot.val();
             }
           });  this.Prdata(this.PName,this.PSumm,this.PDes,this.PCat,this.Pauth);
     }, {
