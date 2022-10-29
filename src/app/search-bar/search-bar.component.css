@@ -318,10 +318,14 @@ animation-fill-mode: forwards;
   box-shadow: 0 4px 6px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.img{
-  height: 230px;
-  width: 100%;
+.img{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
 }
+
 #prjt_cv_img{
   height: 100%;
   width: 100%;
@@ -420,3 +424,4 @@ height: 200px;
 #prjt_sum,#prjt_des,#prjt_auth{
   background-color: rgb(192, 191, 191);
 }
+

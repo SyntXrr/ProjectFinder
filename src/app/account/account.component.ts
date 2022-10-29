@@ -122,15 +122,24 @@ export class AccountComponent implements OnInit {
 
   profileWind:boolean=true;
   projectWind:boolean=false;
+  uploadProjects:boolean=false;
 
   showPrfl(){
     this.projectWind=false;
+    this.uploadProjects=false;
     this.profileWind=true;
   }
 
   showPrjt(){
     this.profileWind=false;
+    this.uploadProjects=false;
     this.projectWind=true;
+  }
+  
+  showUpPrjt(){
+    this.profileWind=false;
+    this.projectWind=false;
+    this.uploadProjects=true;
   }
 
   projectCategory:String="";
@@ -150,5 +159,5 @@ export class AccountComponent implements OnInit {
       Author:this.Name
     });
     alert("Project Uploaded Succesfully");
-  }
+  } 
 }

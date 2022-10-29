@@ -127,8 +127,6 @@ button:hover
   opacity: 0.7;
 }
 
-
-
 .tag_ln
 {
   width: 100%;
@@ -202,17 +200,18 @@ button:hover
     border-radius: 0px 0px 8px 8px;
   }
   
-  #prjt_list{
+  #prjt_list,#upload{
     margin: 10px;;
-    width:45%;
-    float:left;
+    margin-left: 20%;
+    margin-right: 20%;
   }
   
   #upload{
     margin: 10px;
-    width:45%;
-    float:left;
+    margin-left: 20%;
+    margin-right: 20%;
   }
+
   #upload input[type='text']{
     border-radius: 8px;    
     font-family:  'Roboto', sans-serif;
@@ -277,37 +276,50 @@ button:hover
     cursor: pointer;
   }
 
-  #prjt_crd{
-    margin: 5px;
-    height: 150px;
-    box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  }
-  .img{
-    height: 100%;
-    width: 30%;
-    float: left;
-  }
-  #prjt_cv_img{
-    height: 100%;
-    width: 100%;
-    border-radius: 8px 0px 0px 8px;
-  }
-
-  .prjt_data{
-    width: 70%;
-    color: rgba(192, 137, 137);
-    float: right;
-  }  
-
-  .Pdata{
-      margin: 3px;
-      margin-left: 5px;
-      font-weight: bold;
-  }
-
 #sltCat{
     outline: none;
     border:1px solid rgb(192, 137, 137);
     height: 25px;
     width: 99%;
+}
+
+
+.projects,.uploadProjects{
+  width: 100%;
+}
+
+#prjt_crd{
+  margin: 5px;
+  height: auto;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#prjt_crd:hover{
+  box-shadow: 0 4px 6px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+
+#prjt_cv_img{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.prjt_data{
+  text-align: center;
+  width: 100%;
+  color: rgba(192, 137, 137);
+}  
+
+.Pdata{
+    margin-left: 8px;
 }

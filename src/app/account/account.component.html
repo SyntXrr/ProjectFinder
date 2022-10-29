@@ -44,79 +44,75 @@
 </div>
 
 <div class="dash" *ngIf="dashboard">
-    <mat-sidenav-container class = "tp-container">
-        <mat-sidenav mode = "side" opened>
-            <section class="Profile_pic"><img src="assets/icon.png" id="shrt_img"></section>
-           <section class = "tp-section" (click)="showPrfl()">
-              <span id="profile" >Profile</span>
-           </section>
-           <section class = "tp-section"(click)="showPrjt()">
-              <span id="Projects" >My Projects</span>
-           </section>
-           <section class = "tp-section">
-            <span id="logout" routerLink="/">Logout</span>
-         </section>
-        </mat-sidenav>
-        <div class="profile" *ngIf="profileWind">
-            <mat-card id="prfl_card">
-                      <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>{{UserType}}</h4></div></div>
-                      <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>{{Name}}</h4></div></div>
-                      <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>{{PEmail}}</h4></div></div>
-                      <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>{{College}}</h4></div></div>
-                      <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>{{Class}}</h4></div></div>
-             </mat-card>
-        </div>
+  <mat-sidenav-container class = "tp-container">
+    <mat-sidenav mode = "side" opened>
+      <section class="Profile_pic"><img src="assets/icon.png" id="shrt_img"></section>
+      <section class = "tp-section" (click)="showPrfl()"><span id="profile" >Profile</span></section>
+      <section class = "tp-section"(click)="showPrjt()"><span id="Projects" >My Projects</span></section>
+      <section class = "tp-section"(click)="showUpPrjt()"><span id="UpProjects" >Upload Project</span></section>
+      <section class = "tp-section"><span id="logout" routerLink="/">Logout</span></section>
+    </mat-sidenav>
+        
+    <div class="profile" *ngIf="profileWind">
+      <mat-card id="prfl_card">
+        <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>{{UserType}}</h4></div></div>
+        <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>{{Name}}</h4></div></div>
+        <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>{{PEmail}}</h4></div></div>
+        <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>{{College}}</h4></div></div>
+        <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>{{Class}}</h4></div></div>
+      </mat-card>
+    </div>
 
-        <div class="projects" *ngIf="projectWind">
-          <mat-card id="prjt_list" >
-            <mat-card-header id="header">My Project List</mat-card-header>
-            <div class="list" >
-               <mat-card id="prjt_crd" *ngFor ="let card of Projects">
-                  <div class="img">
-                    <img id="prjt_cv_img"src="assets/logo.png">
-                  </div>
-                  <div class="prjt_data">
-                     <div class="Pdata">{{card.pn}}</div>
-                     <div class="Pdata">{{card.pc}}</div>
-                     <div class="Pdata">{{card.ps}}</div>
-                     <div class="Pdata">{{card.pd}}</div>
-                     <div class="Pdata">{{card.pa}}</div>
-                    </div>
-               </mat-card>
-               </div>
-          </mat-card>
-
-          <mat-card id="upload">
-             <mat-card-header id="header">Upload Your Project here</mat-card-header>
-             <div class="cv_img">
-                <div class="ic">
-                   <img src="assets/up_ic.png">
-                   <h3>Upload Cover Image</h3>
+    <div class="projects" *ngIf="projectWind">
+      <mat-card id="prjt_list" >
+        <mat-card-header id="header">My Project List</mat-card-header>
+        <div class="list">
+          <mat-grid-list cols="2" rowHeight="400px">
+            <mat-grid-tile  *ngFor ="let card of Projects" >
+              <mat-card id="prjt_crd"(click)="showPrjts()">
+                <div class="img">
+                  <img id="prjt_cv_img"src="assets/logo.png">
                 </div>
-             </div>
-             <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
-             <div class="prjt_sum">Project Summery<input type="text" placeholder="Project Summery" #psumm></div>
-             <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
-             <div class="prjt_cat">Project Category
-                <select [(ngModel)]="projectCategory" class="prjt_cat" id="sltCat">
-                    <option>Computer Science</option>
-                    <option>Animation</option>
-                    <option>Biology</option>
-                    <option>Forensic Science</option>
-                    <option>Micro Biology</option>
-                    <option>Food Processing</option>
-                    <option>Boi Technology</option>
-                    <option>Statistics</option>
-                    <option>Electrical</option>
-                    <option>Nano Science</option>
-                    <option>Chemistry</option>
-                    <option>Zoology</option>
-                </select>
-             </div>
-             <div class="prjt_att">Attach Files<img src="assets/att.png"></div>
-             <button id="btn_upload" mat-button (click)="upload(pname.value,psumm.value,pdescr.value)">Uplaod</button>
-          </mat-card>
+                <div class="prjt_data">
+                  <div class="Pdata"><h2>{{card.pn}}</h2></div>
+                  <div class="Pdata"><h4>{{card.pc}}</h4></div>
+                  <div class="Pdata">{{card.ps}}</div>
+                  <div class="Pdata">{{card.pa}}</div>
+                </div>
+              </mat-card>
+            </mat-grid-tile>
+          </mat-grid-list>
         </div>
-     </mat-sidenav-container>
+      </mat-card>
+    </div>
+
+    <div class="uploadProjects" *ngIf="uploadProjects">
+      <mat-card id="upload">
+        <mat-card-header id="header">Upload Your Project here</mat-card-header>
+        <div class="cv_img"><div class="ic"><img src="assets/up_ic.png"><h3>Upload Cover Image</h3></div></div>
+          <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
+          <div class="prjt_sum">Project Summery<input type="text" placeholder="Project Summery" #psumm></div>
+          <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
+          <div class="prjt_cat">Project Category
+            <select [(ngModel)]="projectCategory" class="prjt_cat" id="sltCat">
+              <option>Computer Science</option>
+              <option>Animation</option>
+              <option>Biology</option>
+              <option>Forensic Science</option>
+              <option>Micro Biology</option>
+              <option>Food Processing</option>
+              <option>Boi Technology</option>
+              <option>Statistics</option>
+              <option>Electrical</option>
+              <option>Nano Science</option>
+              <option>Chemistry</option>
+              <option>Zoology</option>
+            </select>
+          </div>
+          <div class="prjt_att">Attach Files<img src="assets/att.png"></div>
+          <button id="btn_upload" mat-button (click)="upload(pname.value,psumm.value,pdescr.value)">Uplaod</button>
+      </mat-card>
+    </div>
+  </mat-sidenav-container>
 </div>
 
