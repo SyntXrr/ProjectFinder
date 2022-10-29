@@ -324,7 +324,7 @@ animation-fill-mode: forwards;
 #prjt_crd{
   margin: 5px;
   height: 150px;
-  
+  cursor: pointer;
   box-shadow: 0 2px 4px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -354,4 +354,67 @@ animation-fill-mode: forwards;
 .srchList{
   margin: auto;
   width: 50%;
+}
+
+.prjts_des{
+background-color: #f1f1f1;
+}
+
+#prjtDes{
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#prjt_pic{
+margin-left: 35%;
+margin-right: 35%;
+height: 200px;
+}
+
+#prjt_pic img{
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.prjt_name{
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 8px 8px 0px 0px;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: rgb(216, 215, 215);
+  margin-top: 5px;
+}
+
+.prjt_cat{
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+  background-color: rgb(216, 215, 215);
+  margin-top: 2px;
+}
+
+.prjt_sum{
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+  background-color: rgb(216, 215, 215);
+  margin-top: 2px;
+}
+
+.prjt_desc{
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 0px 0px 8px 8px;
+  text-align: center;
+  background-color: rgb(216, 215, 215);
+  margin-top: 2px;
+}
+
+#tabs{
+  margin-left: 15%;
+  margin-right: 15%;
 }

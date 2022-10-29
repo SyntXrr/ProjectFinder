@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule }  from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @NgModule({
@@ -39,6 +39,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatSidenavModule,
     MatButtonModule,
+    MatTabsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

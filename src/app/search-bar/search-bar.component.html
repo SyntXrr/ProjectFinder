@@ -38,8 +38,8 @@
 <div class="srchList" *ngIf="listFlag">
   <mat-card id="prjt_list" >
     <mat-card-header id="header">{{CatList}} Project List</mat-card-header>
-    <div class="list" >
-       <mat-card id="prjt_crd" *ngFor ="let card of Projects">
+    <div class="list">
+       <mat-card id="prjt_crd" *ngFor ="let card of Projects"  (click)="showPrjtDes()">
           <div class="img">
             <img id="prjt_cv_img"src="assets/logo.png">
           </div>
@@ -56,5 +56,20 @@
 </div>
 
 <div class="prjts_des" *ngIf="prjtDesrcFlag">
-
+  <mat-card id="prjtDes">
+    <div id="prjt_pic"><img src="assets/logo.png"></div>
+    <div class="prjt_name">ProjectFinder</div>
+    <mat-tab-group mat-align-tabs="center" id="tabs">
+      <mat-tab label="Overview">
+        <div class="prjt_cat"><h4 id="prjt_cat">Category</h4></div>
+        <div class="prjt_sum"><h4 id="prjt_sum">Summery</h4></div>
+        <div class="prjt_desc"><h4 id="prjt_des">Description</h4></div>
+      </mat-tab>
+      <mat-tab label="Media / Links"></mat-tab>
+      <mat-tab label="Comments"></mat-tab>
+    </mat-tab-group>    
+    
+    
+    
+  </mat-card>
 </div>

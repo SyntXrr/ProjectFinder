@@ -97,4 +97,8 @@ export class SearchBarComponent implements OnInit {
       onlyOnce: true
     });
   }
+  showPrjtDes(){
+    this.listFlag=false;
+    this.prjtDesrcFlag=true;
+  }
 }
