@@ -1,5 +1,5 @@
 .srch_bar{
-  margin-top: 30px;
+    padding-top: 30px;
     height: 600px;
     width: 100%;
 }
@@ -251,6 +251,12 @@ animation-fill-mode: forwards;
    100%{margin-right: 250px}
 }
 
+.srchList{
+  background-color: #f1f1f1;
+  height: 100%;
+  width: 100%;
+}
+
 .Text{
   font-size: 18px;
   color: wheat;
@@ -259,28 +265,10 @@ animation-fill-mode: forwards;
   left: 15%;
 }
 
-.srchCS{
-  padding: 10px;
-  height: 300px;
-}
-.srchCS h3{
-  margin: 0px;
-  float: left;
-}
-
-#searchCS{
-  border-color: red;
-  border-radius: 5px;
-  outline: none;
-  float: right;
-  height: 20px;
-  width: 200px;
-}
-
-.prjt_list{
+#prjt_list{
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 10px;
-  float: left;
-  width:100% ;
 }
 
 .pr{
@@ -309,21 +297,19 @@ animation-fill-mode: forwards;
   width: 90px;
   float: left;
 }
-
-#prjt_list{
-  margin: 10px;;
-  width:100%;
-  float:left;
-}
   #header{
-  padding: 4px;
+    font-size: 20px;
+  text-align: center;
+  padding: 6px;
   background-color: rgb(236, 79, 79);
   color: #eee;
   border-radius:8px 8px 0px 0px ;
 }
+
 #prjt_crd{
   margin: 5px;
-  height: 150px;
+  height: auto;
+  width: 40%;
   cursor: pointer;
   box-shadow: 0 1px 2px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -333,35 +319,30 @@ animation-fill-mode: forwards;
 }
 
 .img{
-  height: 100%;
-  width: 30%;
-  float: left;
+  height: 230px;
+  width: 100%;
 }
 #prjt_cv_img{
   height: 100%;
   width: 100%;
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 8px 8px 8px 8px;
 }
 
 .prjt_data{
-  width: 70%;
+  text-align: center;
+  width: 100%;
   color: rgba(192, 137, 137);
-  float: right;
 }  
 
 .Pdata{
     margin-left: 8px;
 }
 
-.srchList{
-  margin: auto;
-  width: 50%;
-}
-
 .prjts_des{
+  background-color: #f1f1f1;
   height: 100%;
   width: 100%;
-background-color: #f1f1f1;
+
 }
 
 #prjtDes{
@@ -433,6 +414,10 @@ height: 200px;
 }
 
 #prjtDes p{
-  font-size: 15px;
-
+  font-size: 15px
 }
+
+#prjt_sum,#prjt_des,#prjt_auth{
+  background-color: rgb(192, 191, 191);
+}
+

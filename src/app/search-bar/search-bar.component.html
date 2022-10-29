@@ -37,21 +37,24 @@
 
 <div class="srchList" *ngIf="listFlag">
   <mat-card id="prjt_list" >
-    <mat-card-header id="header">{{CatList}} Project List</mat-card-header>
-    <div class="list">
-       <mat-card id="prjt_crd" *ngFor ="let card of Projects"  (click)="showPrjtDes(card.pn,card.pc)">
-          <div class="img">
-            <img id="prjt_cv_img"src="assets/logo.png">
-          </div>
-          <div class="prjt_data">
-             <div class="Pdata"><h2>{{card.pn}}</h2></div>
-             <div class="Pdata"><h4>{{card.pc}}</h4></div>
-             <div class="Pdata">{{card.ps}}</div>
-             <div class="Pdata">{{card.pd}}</div>
-             <div class="Pdata">{{card.pa}}</div>
-            </div>
-       </mat-card>
-       </div>
+    <div id="header">{{CatList}} Project List</div>
+      <div class="list">
+        <mat-grid-list cols="300px" rowHeight="400px" >
+          <mat-grid-tile>
+            <mat-card id="prjt_crd" *ngFor ="let card of Projects"  (click)="showPrjtDes(card.pn,card.pc)">
+              <div class="img">
+                <img id="prjt_cv_img"src="assets/logo.png">
+              </div>
+              <div class="prjt_data">
+                <div class="Pdata"><h2>{{card.pn}}</h2></div>
+                <div class="Pdata"><h4>{{card.pc}}</h4></div>
+                <div class="Pdata">{{card.ps}}</div>
+                <div class="Pdata">{{card.pa}}</div>
+              </div>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
   </mat-card>
 </div>
 
