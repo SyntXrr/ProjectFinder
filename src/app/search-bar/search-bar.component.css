@@ -309,7 +309,7 @@ animation-fill-mode: forwards;
 #prjt_crd{
   margin: 5px;
   height: auto;
-  width: 40%;
+  width: 100%;
   cursor: pointer;
   box-shadow: 0 1px 2px 0 rgba(192, 137, 137), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -420,4 +420,3 @@ height: 200px;
 #prjt_sum,#prjt_des,#prjt_auth{
   background-color: rgb(192, 191, 191);
 }
-

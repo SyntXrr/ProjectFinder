@@ -39,9 +39,9 @@
   <mat-card id="prjt_list" >
     <div id="header">{{CatList}} Project List</div>
       <div class="list">
-        <mat-grid-list cols="300px" rowHeight="400px" >
-          <mat-grid-tile>
-            <mat-card id="prjt_crd" *ngFor ="let card of Projects"  (click)="showPrjtDes(card.pn,card.pc)">
+        <mat-grid-list cols="2" rowHeight="400px">
+          <mat-grid-tile  *ngFor ="let card of Projects" >
+            <mat-card id="prjt_crd"(click)="showPrjtDes(card.pn,card.pc)">
               <div class="img">
                 <img id="prjt_cv_img"src="assets/logo.png">
               </div>
