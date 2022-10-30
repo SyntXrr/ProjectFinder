@@ -11,7 +11,7 @@
                 <div class="lname">Last Name<input type="text" placeholder="Enter Last Name" #lname></div>
               </div>
       
-              <div class="email" id="content">Email<input type="email" placeholder="Enter Email" #email></div>
+              <div class="email" id="content">User Name<input type="text" placeholder="Enter User Name" #userID></div>
         
               <div class="clg" id="content">college<input type="text" placeholder="Collage Name" #clgName></div>
               <div class="cls" id="content">Class<input type="text" placeholder="Class" #class></div>
@@ -23,7 +23,7 @@
       
               <div class="prfnl" id="content"><div class="fname">User Type<input type="text" placeholder="Student or Teacher" #userType ></div></div>
        
-              <div class="sgn_up_btn" id="content"><button (click)="signup(fname.value,lname.value,email.value,pass.value,cnfpass.value,userType.value,clgName.value,class.value)">Sign Up</button></div>
+              <div class="sgn_up_btn" id="content"><button (click)="signup(fname.value,lname.value,userID.value,pass.value,cnfpass.value,userType.value,clgName.value,class.value)">Sign Up</button></div>
           
             </div>
           </div>
@@ -57,7 +57,7 @@
       <mat-card id="prfl_card">
         <div class="box"><div class="txt">User Type</div><div class="data_usrTp" id="data"><h4>{{UserType}}</h4></div></div>
         <div class="box"><div class="txt">Name</div><div class="data_name" id="data"><h4>{{Name}}</h4></div></div>
-        <div class="box"><div class="txt">Email</div><div class="data_email" id="data"><h4>{{PEmail}}</h4></div></div>
+        <div class="box"><div class="txt">User Name</div><div class="data_email" id="data"><h4>{{userId}}</h4></div></div>
         <div class="box"><div class="txt">Collage</div><div class="data_clg" id="data"><h4>{{College}}</h4></div></div>
         <div class="box"><div class="txt">Class</div><div class="data_class" id="data"><h4>{{Class}}</h4></div></div>
       </mat-card>

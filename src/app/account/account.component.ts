@@ -16,12 +16,12 @@ export class AccountComponent implements OnInit {
    
   router: any;
 
-  signup(fnm:String,lnm:String,eml:String,pass:String,cnfpss:String,usrtp:String,clg:string,cls:String){
+  signup(fnm:String,lnm:String,usr:String,pass:String,cnfpss:String,usrtp:String,clg:string,cls:String){
    if(pass===cnfpss){
-    set(ref(this.database,'users/' + eml +'/Profile'), {
+    set(ref(this.database,'users/' + usr +'/Profile'), {
       FirstName:fnm,
       LastName:lnm,
-      Email:eml,
+      UserID:usr,
       Password:pass,
       UserType:usrtp,
       College:clg,
@@ -40,6 +40,29 @@ export class AccountComponent implements OnInit {
   userId:String="";
   password:String="";
 
+ login(usrId:String,pass:String){
+    this.userId=usrId;
+    this.password=pass;
+    const DB = ref(this.database, 'users/' + this.userId  + '/Profile');
+    onValue(DB, (snapshot) => {
+      const data = snapshot.val();
+        if(this.password===data.Password){
+          alert("Login Successfull");
+          this.form=false;
+          this.dashboard=true;
+          this.UserType=data.UserType;
+          this.Name=data.FirstName+" "+data.LastName;
+          this.userId=data.UserID;
+          this.College=data.College;
+          this.Class=data.Class;
+          this.showPrjts();
+        }
+        else{
+          alert("Invalid Credentials");
+        }
+    });
+  }
+  
   Projects = [
     {
       pn:'Name',
@@ -61,29 +84,6 @@ export class AccountComponent implements OnInit {
     this.Projects.push(project);
   }
 
- login(usrId:String,pass:String){
-    this.userId=usrId;
-    this.password=pass;
-    const DB = ref(this.database, 'users/' + this.userId  + '/Profile');
-    onValue(DB, (snapshot) => {
-      const data = snapshot.val();
-        if(this.password===data.Password){
-          alert("Login Successfull");
-            this.form=false;
-          this.dashboard=true;
-          this.UserType=data.UserType;
-          this.Name=data.FirstName+" "+data.LastName;
-          this.PEmail=data.Email;
-          this.College=data.College;
-          this.Class=data.Class;
-          this.showPrjts();
-        }
-        else{
-          alert("Invalid Credentials");
-        }
-    });
-  }
-  
   PName:String='';PSumm:String='';PCat:String='';PDes:String='';Pauth:String='';Purl:String='';
   showPrjts(){
     const DB1 = ref(this.database, 'users/' + this.userId  + '/Projects');
