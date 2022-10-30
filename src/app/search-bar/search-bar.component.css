@@ -378,7 +378,7 @@ height: 200px;
   margin-top: 5px;
 }
 
-.prjt_cat,.prjt_sum,.prjt_desc,.prjt_auth,.prjt_iamges,.prjt_url{
+.prjt_cat,.prjt_sum,.prjt_desc,.prjt_auth,.prjt_iamges,.prjt_url,.prjt_com{
   font-size: 20px;
   padding: 8px;
   text-align: center;
@@ -400,4 +400,18 @@ height: 200px;
 
 #prjt_sum,#prjt_des,#prjt_auth,#prjt_iamges,#prjt_url{
   background-color: rgb(192, 191, 191);
+}
+
+#cname,#ccoment{
+  margin-top: 5px;
+  width: 90%;
+  height: 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+#btn_com{
+  margin-top: 5px;
+  width: 91%;
 }

@@ -129,4 +129,10 @@ export class SearchBarComponent implements OnInit {
     onlyOnce: true
   });
   }
+  comment(cname:any,ccomment:any){
+    set(ref(this.database, 'Projects/'+ this.ProjectCategory  +'/'+ this.ProjectName + '/Comments/' + cname),{
+        Comment:ccomment
+    });
+    alert('Comment Successfully');
+  }
 }
