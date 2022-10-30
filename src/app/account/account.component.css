@@ -219,7 +219,7 @@ button:hover
     color: rgb(192, 137, 137);
   }
 
-  .prjt_name,.prjt_descr, .prjt_cat,.prjt_att,.prjt_sum{
+  .prjt_name,.prjt_descr, .prjt_cat,.prjt_att,.prjt_sum,.prjt_urls{
     color: rgb(192, 137, 137);
     margin-top: 10px;
   }

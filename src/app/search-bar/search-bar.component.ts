@@ -99,6 +99,7 @@ export class SearchBarComponent implements OnInit {
   ProjectDescription:String="";
   ProjectAuthor:String="";
   ProjectURL:String='';
+  UserID:String=''
   showPrjtDes(prname:any,pcat:any){
     this.ProjectName=prname
     this.listFlag=false;
@@ -124,15 +125,22 @@ export class SearchBarComponent implements OnInit {
         if(childSnapshot.key==='URL'){
           this.ProjectURL= childSnapshot.val();
         }
+        if(childSnapshot.key==='UserID'){
+          this.UserID= childSnapshot.val();
+        }
       }); 
     }, {
     onlyOnce: true
   });
   }
+  
   comment(cname:any,ccomment:any){
     set(ref(this.database, 'Projects/'+ this.ProjectCategory  +'/'+ this.ProjectName + '/Comments/' + cname),{
         Comment:ccomment
     });
+    set(ref(this.database, 'users/'+ this.UserID  + '/Projects/' + this.ProjectName + '/Comments/' + cname),{
+      Comment:ccomment
+  });
     alert('Comment Successfully');
   }
 }

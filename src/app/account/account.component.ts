@@ -151,7 +151,8 @@ export class AccountComponent implements OnInit {
       Summery: psumm,
       URL:url,
       Category:this.projectCategory,
-      Author:this.Name
+      Author:this.Name,
+      UserID:this.userId
     });
     set(ref(this.database, 'users/' + this.userId  + '/Projects/' + pname),{
       Name:pname,
