@@ -378,7 +378,7 @@ height: 200px;
   margin-top: 5px;
 }
 
-.prjt_cat{
+.prjt_cat,.prjt_sum,.prjt_desc,.prjt_auth,.prjt_iamges,.prjt_url{
   font-size: 20px;
   padding: 8px;
   text-align: center;
@@ -386,32 +386,9 @@ height: 200px;
   margin-top: 2px;
 }
 
-.prjt_sum{
-  font-size: 20px;
-  padding: 8px;
-  text-align: center;
-  background-color: rgb(216, 215, 215);
-  margin-top: 2px;
-}
-
-.prjt_desc{
-  font-size: 20px;
-  padding: 8px;
-  border-radius: 0px 0px 0px 0px;
-  text-align: center;
-  background-color: rgb(216, 215, 215);
-  margin-top: 2px;
-}
-
-.prjt_auth{
-  font-size: 20px;
-  padding: 8px;
+.prjt_auth,.prjt_url{
   border-radius: 0px 0px 8px 8px;
-  text-align: center;
-  background-color: rgb(216, 215, 215);
-  margin-top: 2px;
 }
-
 #tabs{
   margin-left: 15%;
   margin-right: 15%;
@@ -421,7 +398,6 @@ height: 200px;
   font-size: 15px
 }
 
-#prjt_sum,#prjt_des,#prjt_auth{
+#prjt_sum,#prjt_des,#prjt_auth,#prjt_iamges,#prjt_url{
   background-color: rgb(192, 191, 191);
 }
-

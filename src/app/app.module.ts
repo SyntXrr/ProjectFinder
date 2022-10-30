@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { TrendingProjectsComponent } from './trending-projects/trending-projects.component';
 import { FeedbackComponent } from './feedback/feedback.component';
-import { FooterComponent } from './footer/footer.component';
 import { FormGroup, FormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -25,7 +24,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
     SearchBarComponent,
     TrendingProjectsComponent,
     FeedbackComponent,
-    FooterComponent,
     BannerComponent,
     AccountComponent,
   ],

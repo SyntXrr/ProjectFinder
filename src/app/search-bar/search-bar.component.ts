@@ -17,7 +17,7 @@ export class SearchBarComponent implements OnInit {
       pn:'Name',
       pc:'Category',
       ps:'Summery',
-      pa:'Author'
+      pa:'Author',
     }
   ]
   
@@ -26,7 +26,7 @@ export class SearchBarComponent implements OnInit {
       pn:pn,
       ps:ps,
       pc:pc,
-      pa:pa
+      pa:pa,
     }
     this.Projects.push(project);
   }
@@ -98,6 +98,7 @@ export class SearchBarComponent implements OnInit {
   ProjectSummery:String="";
   ProjectDescription:String="";
   ProjectAuthor:String="";
+  ProjectURL:String='';
   showPrjtDes(prname:any,pcat:any){
     this.ProjectName=prname
     this.listFlag=false;
@@ -119,6 +120,9 @@ export class SearchBarComponent implements OnInit {
         }
         if(childSnapshot.key==='Author'){
           this.ProjectAuthor= childSnapshot.val();
+        }
+        if(childSnapshot.key==='URL'){
+          this.ProjectURL= childSnapshot.val();
         }
       }); 
     }, {

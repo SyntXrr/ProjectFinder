@@ -61,8 +61,6 @@ export class AccountComponent implements OnInit {
     this.Projects.push(project);
   }
 
-  PName:String='';PSumm:String='';PCat:String='';PDes:String='';Pauth:String='';
-
  login(usrId:String,pass:String){
     this.userId=usrId;
     this.password=pass;
@@ -84,9 +82,9 @@ export class AccountComponent implements OnInit {
           alert("Invalid Credentials");
         }
     });
-   
   }
-
+  
+  PName:String='';PSumm:String='';PCat:String='';PDes:String='';Pauth:String='';Purl:String='';
   showPrjts(){
     const DB1 = ref(this.database, 'users/' + this.userId  + '/Projects');
     onValue(DB1, (snapshot) => {
@@ -109,6 +107,9 @@ export class AccountComponent implements OnInit {
             }
             if(childSnapshot.key==='Author'){
               this.Pauth= childSnapshot.val();
+            }
+            if(childSnapshot.key==='URL'){
+              this.Purl= childSnapshot.val();
             }
           });  this.Prdata(this.PName,this.PSumm,this.PDes,this.PCat,this.Pauth);
     }, {
@@ -143,11 +144,12 @@ export class AccountComponent implements OnInit {
   }
 
   projectCategory:String="";
-  upload(pname:String,psumm:string,pdesc:String){
+  upload(pname:String,psumm:string,pdesc:String,url:string){
     set(ref(this.database, 'Projects/' + this.projectCategory + '/'+ pname), {
       Name:pname,
       Description:pdesc,
       Summery: psumm,
+      URL:url,
       Category:this.projectCategory,
       Author:this.Name
     });
@@ -155,6 +157,7 @@ export class AccountComponent implements OnInit {
       Name:pname,
       Description:pdesc,
       Summery: psumm,
+      URL:url,
       Category:this.projectCategory,
       Author:this.Name
     });

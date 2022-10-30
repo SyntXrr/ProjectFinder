@@ -69,7 +69,7 @@
         <div class="list">
           <mat-grid-list cols="2" rowHeight="400px">
             <mat-grid-tile  *ngFor ="let card of Projects" >
-              <mat-card id="prjt_crd"(click)="showPrjts()">
+              <mat-card id="prjt_crd">
                 <div class="img">
                   <img id="prjt_cv_img"src="assets/logo.png">
                 </div>
@@ -93,6 +93,7 @@
           <div class="prjt_name">Project Name<input type="text" placeholder="Enter Project Name" #pname ></div>
           <div class="prjt_sum">Project Summery<input type="text" placeholder="Project Summery" #psumm></div>
           <div class="prjt_descr">Project Description<input type="text" placeholder="Project Description" #pdescr></div>
+          <div class="prjt_urls">Project URL<input type="text" placeholder="URL" #purl></div>
           <div class="prjt_cat">Project Category
             <select [(ngModel)]="projectCategory" class="prjt_cat" id="sltCat">
               <option>Computer Science</option>
@@ -110,7 +111,7 @@
             </select>
           </div>
           <div class="prjt_att">Attach Files<img src="assets/att.png"></div>
-          <button id="btn_upload" mat-button (click)="upload(pname.value,psumm.value,pdescr.value)">Uplaod</button>
+          <button id="btn_upload" mat-button (click)="upload(pname.value,psumm.value,pdescr.value,purl.value)">Uplaod</button>
       </mat-card>
     </div>
   </mat-sidenav-container>
