@@ -103,8 +103,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "ProjectFinder:build:production",
-            "firebaseProject": "projectfinder-9334e",
-            "firebaseHostingSite": "projectfinder-9334e"
+            "firebaseProject": "projectfinder-8c01c",
+            "firebaseHostingSite": "projectfinder-8c01c"
           }
         }
       }
